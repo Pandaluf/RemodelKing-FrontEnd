@@ -1,16 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
-</template>
-
+  <v-app theme="light">
+    <company-progress></company-progress>
+  </v-app>
+  </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import companyProgress from "./components/companyProgress/companyProgress.vue";
+import Nav_bar from "./components/nav_bar.vue";
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    Nav_bar,
+    companyProgress
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>

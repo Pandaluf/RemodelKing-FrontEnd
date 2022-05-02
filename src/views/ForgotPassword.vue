@@ -1,51 +1,28 @@
 <template>
-<<<<<<< Updated upstream
-  <v-main>
-    <v-content>
-      <v-card max-width="800" min-width="300" class="mx-auto mt-9">
-=======
   <v-app>
 
     <v-content>
       <v-card width="800" class="mx-auto mt-9">
->>>>>>> Stashed changes
-        <v-card-title>Log in</v-card-title>
+        <v-card-title>Forgot your password?</v-card-title>
         <v-card-text>
           <v-text-field label="Username" prepend-icon="mdi-account-circle"/>
           <v-text-field
-              label="Password"
+              label="New Password"
+              :type="showPassword ? 'text' : 'password'"
+              prepend-icon="mdi-lock"
+              :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+              @click:append="showPassword =! showPassword"/>
+          <v-text-field
+              label="Confirm Password"
               :type="showPassword ? 'text' : 'password'"
               prepend-icon="mdi-lock"
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               @click:append="showPassword =! showPassword"/>
         </v-card-text>
-<<<<<<< Updated upstream
+
         <v-divider></v-divider>
         <v-card-actions>
-          <router-link to="/Register" class="text-decoration-none">
-            <v-btn color="success">Register</v-btn>
-          </router-link>
-          <router-link to="to" class="text-decoration-none">
-            <v-btn color="success">Login</v-btn>
-          </router-link>
-        </v-card-actions>
-      </v-card>
-    </v-content>
-  </v-main>
-=======
-
-        <v-divider></v-divider>
-        <v-card-actions class ="text-center">
-          <router-link to="/Register" class = "text-decoration-none">
-            <v-btn color="success">Register</v-btn>
-          </router-link>
-          <router-link to="/Login" class = "text-decoration-none">
-            <v-btn color="success">Login</v-btn>
-          </router-link>
-          <router-link to="/ForgotPassword" class = "text-decoration-none">
-            <v-btn color="success">Forgot my password</v-btn>
-          </router-link>
-
+          <v-btn color="success" @click="dialog = true">Change Password</v-btn>
         </v-card-actions>
       </v-card>
     </v-content>
@@ -85,42 +62,25 @@
       </v-footer>
     </template>
   </v-app>
->>>>>>> Stashed changes
+  <PasswordChange :dialog="dialog"/>
   <footer-component />
 </template>
 <script>
 import footerComponent from "../components/footerComponent.vue";
-<<<<<<< Updated upstream
-export default {
-  name: "login",
-  components: {
-    footerComponent
-  },
-
-=======
+import PasswordChange from "../components/PasswordChange.vue";
 
 export default{
   name: "ForgotPassword",
   components: {
-    footerComponent
+    footerComponent,
+    PasswordChange
   },
->>>>>>> Stashed changes
   data()
   {
     return{
-      showPassword:false
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
+      showPassword:false,
+      dialog: false
     }
   }
 }
 </script>
-<<<<<<< Updated upstream
-
-<style scoped>
-
-</style>
-=======
->>>>>>> Stashed changes

@@ -1,13 +1,7 @@
 <template>
-<<<<<<< Updated upstream
-  <v-main>
-    <v-content>
-      <v-card max-width="700" min-width="300" class="mx-auto">
-=======
   <div class = "card-register">
     <v-content class = "mx-auto ">
       <v-card max-width="700" min-width="700" class="mx-auto mt-9 ">
->>>>>>> Stashed changes
         <v-card-title>Log in</v-card-title>
         <v-card-text>
           <v-text-field label="Name" prepend-icon="mdi-account-circle"/>
@@ -25,11 +19,7 @@
       </v-card>
     </v-content>
     <dialog-login :dialog = "dialog" />
-<<<<<<< Updated upstream
-  </v-main>
-=======
   </div>
->>>>>>> Stashed changes
   <footer-component />
 </template>
 
@@ -52,11 +42,8 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< Updated upstream
-=======
   v-main{
     padding: 0;
   }
->>>>>>> Stashed changes
 
 </style>

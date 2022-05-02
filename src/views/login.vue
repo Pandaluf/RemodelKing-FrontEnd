@@ -1,14 +1,8 @@
 <template>
-<<<<<<< Updated upstream
-  <v-main>
-    <v-content>
-      <v-card max-width="800" min-width="300" class="mx-auto mt-9">
-=======
   <v-app>
 
     <v-content>
       <v-card width="800" class="mx-auto mt-9">
->>>>>>> Stashed changes
         <v-card-title>Log in</v-card-title>
         <v-card-text>
           <v-text-field label="Username" prepend-icon="mdi-account-circle"/>
@@ -19,20 +13,6 @@
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               @click:append="showPassword =! showPassword"/>
         </v-card-text>
-<<<<<<< Updated upstream
-        <v-divider></v-divider>
-        <v-card-actions>
-          <router-link to="/Register" class="text-decoration-none">
-            <v-btn color="success">Register</v-btn>
-          </router-link>
-          <router-link to="to" class="text-decoration-none">
-            <v-btn color="success">Login</v-btn>
-          </router-link>
-        </v-card-actions>
-      </v-card>
-    </v-content>
-  </v-main>
-=======
 
         <v-divider></v-divider>
         <v-card-actions class ="text-center">
@@ -85,42 +65,22 @@
       </v-footer>
     </template>
   </v-app>
->>>>>>> Stashed changes
   <footer-component />
 </template>
 <script>
 import footerComponent from "../components/footerComponent.vue";
-<<<<<<< Updated upstream
-export default {
-  name: "login",
-  components: {
-    footerComponent
-  },
-
-=======
 
 export default{
   name: "ForgotPassword",
   components: {
     footerComponent
   },
->>>>>>> Stashed changes
   data()
   {
     return{
       showPassword:false
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     }
   }
 }
 </script>
-<<<<<<< Updated upstream
-
-<style scoped>
-
-</style>
-=======
->>>>>>> Stashed changes

@@ -1,5 +1,3 @@
-import Antares from "../assets/Bussiness Logo/Antares.jpg";
-
 export class BussinessData{
     static cards = [
         {id: 1, name: 'Antares Arquitectos', proyects: 0, description: 'Somos una empresa de diseño arquitectónico de alto nivel y ' +

@@ -1,22 +1,67 @@
 <template>
-  <v-app theme="light">
-    <company-progress></company-progress>
+  <v-app>
+      <v-app-bar
+          color="#76C03C"
+          dark
+      >
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
+        <v-toolbar-title>RemodelKing</v-toolbar-title>
+
+        <v-spacer></v-spacer>
+
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+
+        <v-btn icon>
+          <v-icon>mdi-filter</v-icon>
+        </v-btn>
+
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
+      </v-app-bar>
+
+      <v-navigation-drawer
+          v-model="drawer"
+          bottom
+          color="#4F8983"
+      >
+        <v-list bg-color="#4F8983">
+          <v-list-item :to="{path:'/'}">
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item :to="{path:'/CompanyProgress'}">
+            <v-list-item-title>Company Progress</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item :to="{path:'/'}">
+            <v-list-item-title>Fizz</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item :to="{path:'/'}">
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+
+        </v-list>
+      </v-navigation-drawer>
+
+    <br><br><br><br>
+    <router-view/>
+
   </v-app>
-  </template>
+</template>
 
 <script>
-import companyProgress from "./components/companyProgress/companyProgress.vue";
-import Nav_bar from "./components/nav_bar.vue";
 export default {
-  name: 'App',
-
-  components: {
-    Nav_bar,
-    companyProgress
-  },
-
   data: () => ({
-    //
+    drawer: false,
   }),
 }
 </script>
+
+<style>
+
+</style>

@@ -38,11 +38,11 @@
           </v-list-item>
 
           <v-list-item :to="{path:'/client-portfolio'}">
-            <v-list-item-title>Fizz</v-list-item-title>
+            <v-list-item-title>Portfolio</v-list-item-title>
           </v-list-item>
 
-          <v-list-item :to="{path:'/'}">
-            <v-list-item-title>Buzz</v-list-item-title>
+          <v-list-item :to="{path:'/your-business'}">
+            <v-list-item-title>Your Business</v-list-item-title>
           </v-list-item>
 
         </v-list>
@@ -54,9 +54,11 @@
 </template>
 
 <script>
+import logo from "./assets/logo.png";
 export default {
   data: () => ({
     drawer: false,
+    logo: logo
   }),
 }
 </script>

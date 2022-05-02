@@ -4,6 +4,10 @@ import login from "../views/login.vue";
 import clientPortfolio from "../views/client-portfolio.vue";
 import client from "../views/client.vue";
 import Register from "../views/Register.vue";
+<<<<<<< Updated upstream
+=======
+import ForgotPassword from "../views/ForgotPassword.vue";
+>>>>>>> Stashed changes
 
 const routes = [
     {
@@ -35,6 +39,14 @@ const routes = [
         path: '/Register',
         name: 'Register',
         component: Register
+<<<<<<< Updated upstream
+=======
+    },
+    {
+        path: '/ForgotPassword',
+        name: 'ForgotPassword',
+        component: ForgotPassword
+>>>>>>> Stashed changes
     }
 ]
 

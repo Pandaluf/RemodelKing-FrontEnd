@@ -1,10 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import login from "../views/login.vue";
+
 import App from "../App.vue";
 import clientPortfolio from "../views/client-portfolio.vue";
 import client from "../views/client.vue";
 import BussinessView from "../views/BussinessView.vue";
+
+import clientPortfolio from "../views/client-portfolio.vue";
+import client from "../views/client.vue";
+import Register from "../views/Register.vue";
+import ForgotPassword from "../views/ForgotPassword.vue";
+
 
 const routes = [
     {
@@ -15,9 +22,6 @@ const routes = [
     {
         path: '/CompanyProgress',
         name: 'CompanyProgress',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "about" */ '../views/CompanyProgressView.vue')
     },
     {
@@ -36,9 +40,20 @@ const routes = [
         name: 'client'
     },
     {
+
         path: '/Home/Bussiness/:BussinessId',
         component: BussinessView,
         name: 'Bussiness'
+
+        path: '/Register',
+        name: 'Register',
+        component: Register
+    },
+    {
+        path: '/ForgotPassword',
+        name: 'ForgotPassword',
+        component: ForgotPassword
+
     }
 ]
 

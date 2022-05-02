@@ -6,6 +6,8 @@ import client from "../views/client.vue";
 import Register from "../views/Register.vue";
 import ForgotPassword from "../views/ForgotPassword.vue";
 import BussinessView from "../views/BussinessView.vue";
+import BusinessInfo from "../views/BusinessInfo.vue";
+import YourBusiness from "../views/YourBusiness.vue";
 
 const routes = [
     {
@@ -47,6 +49,16 @@ const routes = [
         path: '/ForgotPassword',
         name: 'ForgotPassword',
         component: ForgotPassword
+    },
+    {
+        path: '/your-business',
+        name: 'your-business',
+        component: YourBusiness
+    },
+    {
+        path: '/business/info/:id',
+        name: 'businessInfo',
+        component: BusinessInfo
     }
 ]
 

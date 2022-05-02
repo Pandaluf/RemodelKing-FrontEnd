@@ -37,7 +37,7 @@
             <v-list-item-title>Company Progress</v-list-item-title>
           </v-list-item>
 
-          <v-list-item :to="{path:'/'}">
+          <v-list-item :to="{path:'/client-portfolio'}">
             <v-list-item-title>Fizz</v-list-item-title>
           </v-list-item>
 
@@ -50,7 +50,6 @@
 
     <br><br><br><br>
     <router-view/>
-
   </v-app>
 </template>
 

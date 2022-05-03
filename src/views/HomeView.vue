@@ -5,40 +5,27 @@
     <v-row>
       <v-col v-for="card in Cards" :key="card.id" cols="12" md="6" lg="3" class="white--text">
         <v-card class="mx-auto" max-width="344">
-          <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-              height="200px"
-          ></v-img>
-
+          <v-img :src="card.img" height="200px"></v-img>
           <v-card-title class="align-center">
             {{ card.name }}
           </v-card-title>
-
           <v-card-subtitle>
             score: {{ card.score }}
           </v-card-subtitle>
-
           <v-card-actions>
-            <router-link :to="{path:`/Home/Bussiness/${card.id}`}">
+            <router-link :to="{path:`/Home/Bussiness/${card.id}`}" class="text-decoration-none">
               <v-btn color="orange lighten-2" text @click="">
                 View Bussiness
               </v-btn>
             </router-link>
-
             <v-spacer></v-spacer>
-
-            <v-btn
-                icon
-                @click="card.Show = !card.Show"
-            >
+            <v-btn icon @click="card.Show = !card.Show">
               <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
             </v-btn>
           </v-card-actions>
-
           <v-expand-transition>
             <div v-show="card.Show">
               <v-divider></v-divider>
-
               <v-card-text>
                 Start Attention: {{card.startOfCustomerService}}
                 <br>
@@ -55,7 +42,7 @@
 </template>
 
 <script>
-import {BussinessData} from "../WebData/BussinessData.js";
+import {BussinessData} from "../WebData/BussinessData";
 export default {
   data(){
     return{

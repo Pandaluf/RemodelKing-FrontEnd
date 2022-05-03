@@ -1,5 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
+import styles from './styles/_variables.scss'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
+import Router from "./router";
 
-createApp(App).mount('#app')
+
+
+createApp(App).use(Router)
+  .use(vuetify)
+  .mount('#app')

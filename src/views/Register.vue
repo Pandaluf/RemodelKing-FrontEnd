@@ -20,7 +20,7 @@
     </v-content>
     <dialog-login :dialog = "dialog" />
   </div>
-  <footer-component />
+  <footer-component class="footer" />
 </template>
 
 <script>
@@ -45,5 +45,9 @@ export default {
   v-main{
     padding: 0;
   }
-
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
 </style>

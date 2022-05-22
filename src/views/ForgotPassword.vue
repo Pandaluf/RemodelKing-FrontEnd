@@ -43,17 +43,15 @@
       </v-card>
     </v-footer>
   </template>
-  <footer-component class="footer" />
   <PasswordChange :dialog="dialog"/>
 </template>
+
 <script>
-import footerComponent from "../components/footerComponent.vue";
 import PasswordChange from "../components/PasswordChange.vue";
 
 export default{
   name: "ForgotPassword",
   components: {
-    footerComponent,
     PasswordChange
   },
   data()

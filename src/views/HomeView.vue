@@ -49,7 +49,6 @@
 import {BusinessServices} from "../Business/services/business.services";
 
 export default {
-
   data(){
     return{
       business: [],

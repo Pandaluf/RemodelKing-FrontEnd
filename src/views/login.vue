@@ -46,16 +46,12 @@
       </v-card>
     </v-footer>
   </template>
-  <footer-component class="footer"/>
 </template>
 <script>
-import footerComponent from "../components/footerComponent.vue";
 
 export default{
   name: "ForgotPassword",
-  components: {
-    footerComponent
-  },
+
   data()
   {
     return{

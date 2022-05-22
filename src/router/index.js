@@ -5,10 +5,10 @@ import clientPortfolio from "../views/client-portfolio.vue";
 import client from "../views/client.vue";
 import Register from "../views/Register.vue";
 import ForgotPassword from "../views/ForgotPassword.vue";
-import BussinessView from "../views/BussinessView.vue";
 import BusinessInfo from "../views/BusinessInfo.vue";
 import YourBusiness from "../views/YourBusiness.vue";
 import Payments from "../views/Payments.vue";
+import BusinessPage from "../Business/pages/businessPage.vue";
 
 const routes = [
     {
@@ -37,8 +37,8 @@ const routes = [
         name: 'client'
     },
     {
-        path: '/Home/Bussiness/:BussinessId',
-        component: BussinessView,
+        path: '/Home/Bussiness/:id',
+        component: BusinessPage,
         name: 'Business'
     },
     {

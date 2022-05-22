@@ -6,7 +6,8 @@
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fake-api": "json-server --watch server/db.json --routes server/routes.json --port 8080"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",

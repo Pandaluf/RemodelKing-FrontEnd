@@ -20,16 +20,13 @@
     </v-content>
     <dialog-login :dialog = "dialog" />
   </div>
-  <footer-component class="footer" />
 </template>
 
 <script>
-import footerComponent from "../components/footerComponent.vue";
 import dialogLogin from "../components/dialogLogin.vue";
 export default {
   name: "Register",
   components: {
-    footerComponent,
     dialogLogin
   },
   data (){

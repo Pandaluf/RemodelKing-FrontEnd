@@ -1,6 +1,9 @@
-<template>
-  <h1 class="Tittles">View Remodeling Companies</h1>
-  <input type="text" v-model="filterField" class="input">
+<template xmlns="http://www.w3.org/1999/html">
+  <div style="text-align: center">
+    <h1 class="Tittles">View Remodeling Companies</h1>
+    <v-icon style="margin-right: 15px; font-size: 35px;">mdi-magnify</v-icon>
+    <input type="text" v-model="filterField" class="input">
+  </div>
   <hr>
   <v-container>
     <v-row>
@@ -48,6 +51,7 @@
 <script>
 import {BusinessServices} from "../Business/services/business.services";
 
+
 export default {
   data(){
     return{
@@ -83,7 +87,7 @@ export default {
   width: 300px;
   height: 45px;
   padding: 15px;
-  margin: 15px auto;
+  margin: 13px auto;
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
   outline: 0px;

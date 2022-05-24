@@ -10,6 +10,11 @@ import YourBusiness from "../views/YourBusiness.vue";
 import Payments from "../views/Payments.vue";
 import BusinessPage from "../Business/pages/businessPage.vue";
 import projectView from "../views/projectView.vue";
+import BusinessRequest from "../views/BusinessRequest.vue";
+import RequestHistory from "../views/RequestHistory.vue";
+import BusinessProfile from "../Business/pages/BusinessProfile.vue";
+import ProjectProfile from "../Business/pages/ProjectProfile.vue";
+import BusinessProfileEdited from "../Business/pages/BusinessProfileEdited.vue";
 
 const routes = [
     {
@@ -53,14 +58,14 @@ const routes = [
         component: ForgotPassword
     },
     {
-        path: '/your-business',
+        path: '/business/info/:id/editing',
         name: 'your-business',
         component: YourBusiness
     },
     {
         path: '/business/info/:id',
-        name: 'businessInfo',
-        component: BusinessInfo
+        name: 'businessProfile',
+        component: BusinessProfile
     },
     {
         path: '/Payments',
@@ -71,6 +76,26 @@ const routes = [
         path: '/Home/business/:id/project/:projectId',
         name: 'project',
         component: projectView
+    },
+    {
+        path: '/request',
+        name: 'businessRequest',
+        component: BusinessRequest
+    },
+    {
+        path: '/history',
+        name: 'requestHistory',
+        component: RequestHistory
+    },
+    {
+        path: '/business/info/:id/project/info/:idProject',
+        name: 'projectProfile',
+        component: ProjectProfile
+    },
+    {
+        path: '/business/info/:id',
+        name: 'businessEdited',
+        component: BusinessProfileEdited
     }
 ]
 

@@ -1,27 +1,22 @@
 <template>
+  <h1 class="title">Your business</h1>
   <v-main>
-    <h1 class="title">Your business</h1>
     <v-container>
       <v-form
           ref="form"
           v-model="valid"
-          lazy-validation
-      >
-        <v-row
-            no-gutters
-        >
+          lazy-validation>
+        <v-row no-gutters>
           <v-col class="labelForm"
                  cols="12"
                  sm="2"
-                 md="2"
-          >
+                 md="2">
             <smal><b>Business name:</b></smal>
           </v-col>
           <v-col
               cols="12"
               sm="6"
-              md="6"
-          >
+              md="6">
             <v-text-field
                 v-model="form.name"
                 :rules="nameRules"
@@ -31,21 +26,17 @@
           </v-col>
         </v-row>
 
-        <v-row
-            no-gutters
-        >
+        <v-row no-gutters>
           <v-col class="labelForm"
                  cols="12"
                  sm="2"
-                 md="2"
-          >
+                 md="2">
             <smal><b>Address:</b></smal>
           </v-col>
           <v-col
               cols="12"
               sm="6"
-              md="6"
-          >
+              md="6">
             <v-text-field
                 v-model="form.address"
                 :rules="addressRules"
@@ -55,45 +46,17 @@
           </v-col>
         </v-row>
 
-        <v-row
-            no-gutters
-        >
+        <v-row no-gutters>
           <v-col class="labelForm"
                  cols="12"
                  sm="2"
-                 md="2"
-          >
-            <smal><b>Email:</b></smal>
-          </v-col>
-          <v-col
-              cols="12"
-              sm="6"
-              md="6"
-          >
-            <v-text-field
-                v-model="form.email"
-                :rules="emailRules"
-                label="Email"
-                required
-            ></v-text-field>
-          </v-col>
-        </v-row>
-
-        <v-row
-            no-gutters
-        >
-          <v-col class="labelForm"
-                 cols="12"
-                 sm="2"
-                 md="2"
-          >
+                 md="2">
             <smal><b>Phone:</b></smal>
           </v-col>
           <v-col
               cols="12"
               sm="6"
-              md="6"
-          >
+              md="6">
             <v-text-field
                 v-model="form.phone"
                 :rules="phoneRules"
@@ -102,10 +65,51 @@
             ></v-text-field>
           </v-col>
         </v-row>
+
+        <v-row no-gutters>
+          <v-col class="labelForm"
+                 cols="12"
+                 sm="2"
+                 md="2">
+            <smal><b>WebSite:</b></smal>
+          </v-col>
+          <v-col
+              cols="12"
+              sm="6"
+              md="6">
+            <v-text-field
+                v-model="form.webSite"
+                :rules="webRules"
+                label="WebSite"
+                required
+            ></v-text-field>
+          </v-col>
+        </v-row>
+
+        <v-row no-gutters="">
+          <v-col class="labelForm"
+                 cols="12"
+                 sm="2"
+                 md="2">
+            <smal><b>Attention days:</b></smal>
+          </v-col>
+          <v-col
+              cols="12"
+              sm="6"
+              md="6">
+            <v-text-field
+                v-model="form.attentionDays"
+                :rules="attentionDaysRules"
+                label="Attention days"
+                required
+            ></v-text-field>
+          </v-col>
+        </v-row>
+
         <v-container class="grey lighten-5">
           <v-row no-gutters>
             <v-col cols="12" sm="6">
-              <smal><b>Proyects</b></smal>
+              <smal><b>Projects</b></smal>
               <div class="upload__wrap">
                 <v-icon x-large style="margin: 38px;position: absolute;" >mdi-plus</v-icon>
                 <div class="upload__btn">
@@ -127,12 +131,12 @@
 
               <div class="upload__wrap">
 
-                <v-icon x-large style="margin: 38px;position: absolute;" v-if="image_preview == ''">mdi-plus</v-icon>
+                <v-icon x-large style="margin: 38px;position: absolute;" v-if="image_preview === ''">mdi-plus</v-icon>
 
-                <div class="upload__item" v-if="image_preview != ''" >
+                <div class="upload__item" v-if="image_preview !== ''" >
                   <img alt="Cargar" class="upload__img" :src="image_preview" width="100" height="100">
                   <a class='upload__del' @click="changeImage('simple', $event)">
-                    <v-icon x-small style="position: absolute;color: rgb(232, 20, 20);font-size: 20px;top: -9px;left: 27px;background: #b1cadf none repeat scroll 0% 0%;border-radius: 17px;padding: 14px;">mdi-cached</v-icon>
+                    <v-icon x-small style="position: absolute;color: rgb(232, 20, 20);font-size: 20px;top: -9px;left: 27px;background: #b1cadf none repeat scroll 0 0;border-radius: 17px;padding: 14px;">mdi-cached</v-icon>
                   </a>
                 </div>
                 <div class="upload__btn" v-else>
@@ -176,17 +180,21 @@ export default {
     address: '',
     addressRules: [
       v => !!v || 'Address is required'],
-    email: '',
-    emailRules: [
-      v => !!v || 'E-mail is required',
-      v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+    webSite: '',
+    webRules: [
+      v => !!v || 'WebSite is required',
+      v => /.+\..+/.test(v) || 'WebSite must be valid',
     ],
+    attentionDays: '',
+    attentionDaysRules: [
+      v => !!v || 'Attention Days are required'],
+
     image_preview: '',
     image_preview_proyects: [],
     form: {
       name: '',
       address: '',
-      email: '',
+      webSite: '',
       phone: '',
       logo: '',
       proyects: []
@@ -218,7 +226,7 @@ export default {
     loadImage(type, file) {
       let reader = new FileReader()
       reader.onload = (e) => {
-        if (type == 'multiple') {
+        if (type === 'multiple') {
           this.form.proyects.push(e.target.result)
           this.image_preview_proyects.push(e.target.result)
         } else {
@@ -230,7 +238,7 @@ export default {
       reader.readAsDataURL(file)
     },
     cleanImage(type, index) {
-      if (type == 'multiple') {
+      if (type === 'multiple') {
         this.image_preview_proyects.splice(index, 1)
         this.form.proyects.splice(index, 1)
       } else {
@@ -245,21 +253,14 @@ export default {
       let valid = await this.$refs.form.validate()
       if(valid.valid) {
         await this.$router.push({
-          name: 'businessInfo',
+          name: 'businessEdited',
           params: {
-            id: 1,
+            id: 2,
             data: JSON.stringify(this.form)
           },
         });
       }
       this.valid = true
-      return
-    },
-    reset () {
-      this.$refs.form.reset()
-    },
-    resetValidation () {
-      this.$refs.form.resetValidation()
     },
   },
 }
@@ -269,7 +270,7 @@ export default {
   text-align: center;
   font-size: 35px;
   font-weight: 300;
-  padding: 25px 0;
+  padding: 50px 0;
 }
 
 </style>

@@ -116,16 +116,15 @@
       </v-form>
     </v-container>
   </v-main>
-  <Succesfull :dialog="dialog"></Succesfull>
+  <Successful :dialog="dialog"></Successful>
 </template>
 
-
 <script>
-import Succesfull from "../components/Succesfull.vue";
+import Successful from "../components/Successful.vue";
 export default {
   name: "Payments",
   components:{
-    Succesfull
+    Successful: Successful
   },
   data (){
     return {

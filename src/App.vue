@@ -24,7 +24,7 @@
           <v-list-item :to="{path:'/client-portfolio'}">
             <v-list-item-title>Portfolio</v-list-item-title>
           </v-list-item>
-          <v-list-item :to="{path:'/your-business'}">
+          <v-list-item :to="{path:'/business/info/2'}">
             <v-list-item-title>Your Business</v-list-item-title>
           </v-list-item>
         </v-list>

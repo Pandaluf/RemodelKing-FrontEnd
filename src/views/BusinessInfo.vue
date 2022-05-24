@@ -9,7 +9,7 @@
           md="4"
       >
 
-        <img v-if="JSON.parse(JSON.parse(JSON.stringify(this.$route.params.data))).logo != ''" :src="JSON.parse(JSON.parse(JSON.stringify(this.$route.params.data))).logo" style="width: 200px;height: 200px;">
+        <img v-if="JSON.parse(JSON.parse(JSON.stringify(this.$route.params.data))).logo !== ''" :src="JSON.parse(JSON.parse(JSON.stringify(this.$route.params.data))).logo" style="width: 200px;height: 200px;">
         <div>
           <p>Valora a esta empresa</p>
           <v-rating

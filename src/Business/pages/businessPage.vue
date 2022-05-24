@@ -5,16 +5,24 @@
         <v-img style="margin-left:25px" :src="business.img" alt="" width="350px" height="300px"> </v-img>
         <div>
           <br>
-          <p style="font-size: 20px">Valora a esta empresa</p>
+          <p style="font-size: 20px">Rate this business</p>
           <v-rating v-model="rating" background-color="orange lighten-3" color="orange" size="40"></v-rating>
         </div>
         <div>
           <br>
-          <p style="font-size: 20px">Valoraciones y opinones</p>
+          <p style="font-size: 20px">Rate and opinions</p>
           <v-rating v-model="business.score" background-color="orange lighten-3" color="orange" size="40"></v-rating>
         </div>
         <div style="margin-right: 20px;">
-          <v-btn style="background: #35c635;margin-bottom: 10px;padding: 8px;border-radius: 10px;color: white; font-size: 20px; width: 250px; height: 40px; margin-top: 25px">REQUEST</v-btn>
+          <router-link to="/request"
+                       class="text-decoration-none list-style-none">
+            <v-btn
+                class="ma-2"
+                color="light-green darken-1"
+                elevation="6"
+                rounded>
+              New Request</v-btn>
+          </router-link>
           <div style="background: #BAE2E2;padding: 20px;display: grid; border-radius: 12px; width: 90%; margin-top: 25px">
             <span class="letter"><b>Business name: </b> {{ business.name }}</span>
             <span class="letter"><b>Address: </b> {{ business.address }}</span>

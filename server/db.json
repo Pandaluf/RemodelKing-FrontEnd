@@ -1,4 +1,20 @@
 {
+  "client": [
+    {
+      "id": 1,
+      "email": "leo@gmail.com",
+      "password": "leo12345",
+      "name": "Lonardo",
+      "phone": 978456123
+    },
+    {
+      "id": 1,
+      "email": "leo@gmail.com",
+      "password": "leo12345",
+      "name": "Lonardo",
+      "phone": 978456123
+    }
+  ],
   "Business": [
     {
       "id": 1,
@@ -95,6 +111,80 @@
       "days": "Monday-Tuesday-Wednesday",
       "flex": 4,
       "phone": "987654321"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "style": "Diseño",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 1
+    },
+    {
+      "id": 2,
+      "style": "Diseño2",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 1
+    },
+    {
+      "id": 3,
+      "style": "Diseño3",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 2
+    },
+    {
+      "id": 4,
+      "style": "Diseño4",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 2
+    },
+    {
+      "id": 5,
+      "style": "Diseño5",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 3
+    },
+    {
+      "id": 6,
+      "style": "Diseño6",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 3
+    },
+    {
+      "id": 7,
+      "style": "Diseño7",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 4
+    },
+    {
+      "id": 8,
+      "style": "Diseño8",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 4
     }
   ]
 }

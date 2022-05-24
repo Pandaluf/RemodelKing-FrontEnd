@@ -9,6 +9,7 @@ import BusinessInfo from "../views/BusinessInfo.vue";
 import YourBusiness from "../views/YourBusiness.vue";
 import Payments from "../views/Payments.vue";
 import BusinessPage from "../Business/pages/businessPage.vue";
+import projectView from "../views/projectView.vue";
 
 const routes = [
     {
@@ -37,7 +38,7 @@ const routes = [
         name: 'client'
     },
     {
-        path: '/Home/Bussiness/:id',
+        path: '/Home/Business/:id',
         component: BusinessPage,
         name: 'Business'
     },
@@ -65,6 +66,11 @@ const routes = [
         path: '/Payments',
         name: 'Payments',
         component: Payments
+    },
+    {
+        path: '/Home/business/:id/project/:projectId',
+        name: 'project',
+        component: projectView
     }
 ]
 

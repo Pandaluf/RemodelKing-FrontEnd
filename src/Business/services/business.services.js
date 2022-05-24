@@ -16,4 +16,10 @@ export class BusinessServices{
     update(id, data){
         return http.put(`/business/${id}`, data)
     }
+    getProjects(){
+        return http.get(`/projects`)
+    }
+    getProjectById(id){
+        return http.get(`/projects/${id}`)
+    }
 }

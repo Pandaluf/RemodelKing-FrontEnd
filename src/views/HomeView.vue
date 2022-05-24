@@ -18,7 +18,7 @@
               score: {{ card.score }}
             </v-card-subtitle>
             <v-card-actions>
-              <router-link :to="{path:`/Home/Bussiness/${card.id}`}" class="text-decoration-none">
+              <router-link :to="{path:`/Home/Business/${card.id}`}" class="text-decoration-none">
                 <v-btn color="orange lighten-2" text @click="">
                   View Bussiness
                 </v-btn>

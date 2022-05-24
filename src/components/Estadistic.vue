@@ -8,49 +8,56 @@
 google.charts.load('current', {'packages':['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawStuff);
 
+function drawMaterialChart(data, materialOptions, chartDiv) {
+  const materialChart = new google.charts.Bar(chartDiv);
+  materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+}
 function drawStuff() {
   var chartDiv = document.getElementById('chart_div');
-
-  var date = [
-    ['Name', 'Prices', 'Numbers'],
-    ['Canis Major Dwarf', 4000, 23.3],
-    ['Sagittarius Dwarf', 24000, 4.5],
-    ['Ursa Major II Dwarf', 30000, 14.3],
-    ['Lg. Magellanic Cloud', 20000, 0.9],
-    ['Bootes I', 40000, 13.1]
-  ]
+  const date = [
+    ['Months', 'Profits'],
+    ['January', 1000],
+    ['February', 1500],
+    ['March', 1350],
+    ['April', 900],
+    ['May', 1100],
+    ['June', 1125],
+    ['July', 1220],
+    ['August', 1450],
+    ['September', 1600],
+    ['october', 1450],
+    ['November', 1500],
+    ['Decemb', 1350]
+  ];
   const data = google.visualization.arrayToDataTable(date);
 
-  var materialOptions = {
+  const materialOptions = {
     width: 900,
     chart: {
-      title: 'Hi people of youtube',
-      subtitle: 'it is diagrams for mi work'
+      title: 'Sales history by months',
+      subtitle: 'is a diagram showing sales by months'
     },
     series: {
-      0: { axis: 'Prices' }, // Bind series 0 to an axis named 'distance'.
-      1: { axis: 'Number' } // Bind series 1 to an axis named 'brightness'.
+      0: {axis: 'Profits'}
     },
     axes: {
       y: {
-        Prices: {label: 'Prices'}, // Left y-axis.
-        Number: {side: 'right', label: 'Number'} // Right y-axis.
+        Profits: {label: 'Profits'}
       }
     }
   };
-
-  function drawMaterialChart() {
-    var materialChart = new google.charts.Bar(chartDiv);
-    materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
-  }
-
-  drawMaterialChart();
+  drawMaterialChart(data, materialOptions, chartDiv)
 }
 
-
-
 export default {
-  name: "Estadistic"
+  name: "Estadistic",
+  created() {
+    //this.drawStuff();
+  },
+  methods: {
+
+  },
+
 }
 </script>
 

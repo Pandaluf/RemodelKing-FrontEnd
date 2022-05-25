@@ -1,0 +1,337 @@
+{
+  "client": [
+    {
+      "id": 1,
+      "email": "leo@gmail.com",
+      "password": "leo12345",
+      "name": "Lonardo",
+      "phone": 978456123
+    },
+    {
+      "id": 1,
+      "email": "leo@gmail.com",
+      "password": "leo12345",
+      "name": "Lonardo",
+      "phone": 978456123
+    }
+  ],
+  "Business": [
+    {
+      "id": 1,
+      "name": "Antares Arquitectos",
+      "projects": 0,
+      "description": "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+      "img": "https://images.pexels.com/photos/2468056/pexels-photo-2468056.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "address": "Montes Urales 755, 11000, Ciudad de México, Miguel Hidalgo",
+      "score": 4,
+      "webSite": "https://www.universidadperu.com/empresas/construcciones-generales.php",
+      "show": false,
+      "startOfCustomerService": 0,
+      "endOfCustomerService": 0,
+      "days": "Friday-Saturday-Sunday",
+      "flex": 4,
+      "phone": "987654321"
+    },
+    {
+      "id": 2,
+      "name": "ArribaPeru",
+      "projects": 0,
+      "description": "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+      "img": "https://images.pexels.com/photos/6420235/pexels-photo-6420235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "address": "Centro de Lima, Lima, Perú",
+      "score": 3.2,
+      "webSite": "https://www.universidadperu.com/empresas/construcciones-generales.php",
+      "show": false,
+      "startOfCustomerService": 0,
+      "endOfCustomerService": 0,
+      "days": "Thursday-Friday",
+      "flex": 4,
+      "phone": "987654321"
+    },
+    {
+      "id": 3,
+      "name": "SomosCivilArt",
+      "projects": 0,
+      "description": "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+      "img": "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "address": "Chiclayo, Lima, Perú",
+      "score": 4,
+      "webSite": "https://www.universidadperu.com/empresas/construcciones-generales.php",
+      "show": false,
+      "startOfCustomerService": 0,
+      "endOfCustomerService": 0,
+      "days": "Monday-Wednesday-Friday",
+      "flex": 4,
+      "phone": "987654321"
+    },
+    {
+      "id": 4,
+      "name": "MALAGA",
+      "projects": 0,
+      "description": "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+      "img": "https://images.pexels.com/photos/389819/pexels-photo-389819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "address": "Trujillo, Perú",
+      "score": 4,
+      "webSite": "https://www.universidadperu.com/empresas/construcciones-generales.php",
+      "show": false,
+      "startOfCustomerService": 0,
+      "endOfCustomerService": 0,
+      "days": "Monday-Tuesday-Wednesday",
+      "flex": 4,
+      "phone": "987654321"
+    },
+    {
+      "id": 5,
+      "name": "Antares Arquitectos",
+      "projects": 0,
+      "description": "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+      "img": "https://images.pexels.com/photos/3183199/pexels-photo-3183199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "address": "Nazca, Ica, Perú",
+      "score": 4,
+      "webSite": "https://www.universidadperu.com/empresas/construcciones-generales.php",
+      "show": false,
+      "startOfCustomerService": 0,
+      "endOfCustomerService": 0,
+      "days": "Tuesday-Thursday-Friday",
+      "flex": 4,
+      "phone": "987654321"
+    },
+    {
+      "id": 6,
+      "name": "Antares Arquitectos",
+      "projects": 0,
+      "description": "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "address": "Chorrillos, Lima, Peru",
+      "score": 4,
+      "webSite": "https://www.universidadperu.com/empresas/construcciones-generales.php",
+      "show": false,
+      "startOfCustomerService": 0,
+      "endOfCustomerService": 0,
+      "days": "Monday-Tuesday-Wednesday",
+      "flex": 4,
+      "phone": "987654321"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "style": "Diseño",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 1
+    },
+    {
+      "id": 2,
+      "style": "Diseño2",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 1
+    },
+    {
+      "id": 3,
+      "style": "Diseño3",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 2
+    },
+    {
+      "id": 4,
+      "style": "Diseño4",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 2
+    },
+    {
+      "id": 5,
+      "style": "Diseño5",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 3
+    },
+    {
+      "id": 6,
+      "style": "Diseño6",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 3
+    },
+    {
+      "id": 7,
+      "style": "Diseño7",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 4
+    },
+    {
+      "id": 8,
+      "style": "Diseño8",
+      "description": "It is a design project in the remodeling of the finish of the house to the client",
+      "localization": "Nazca, Ica, Perú",
+      "img": "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "score": 4,
+      "businessId": 4
+    }
+  ],
+  "clientInformation": [
+    {
+      "id": 1,
+      "firstName": "Julio",
+      "lastName": "Barrios",
+      "contractDate": "1/05/2022",
+      "email": "juliobarrios@gmail.com",
+      "phoneNumber": 992051234
+    },
+    {
+      "id": 2,
+      "firstName": "Julio",
+      "lastName": "Gonzales",
+      "contractDate": "25/04/2022",
+      "email": "juliogonzales@gmail.com",
+      "phoneNumber": 997123124
+    },
+    {
+      "id": 3,
+      "firstName": "Cecilia",
+      "lastName": "Oriana",
+      "contractDate": "23/04/2022",
+      "email": "coriana@gmail.com",
+      "phoneNumber": 992084533
+    },
+    {
+      "id": 4,
+      "firstName": "Alexander",
+      "lastName": "Gutierrez",
+      "contractDate": "13/04/2022",
+      "email": "alexandergu@gmail.com",
+      "phoneNumber": 992057625
+    },
+    {
+      "id": 5,
+      "firstName": "Luis",
+      "lastName": "Gonzales",
+      "contractDate": "26/04/2022",
+      "email": "lgonzales@gmail.com",
+      "phoneNumber": 909151234
+    },
+    {
+      "id": 6,
+      "firstName": "Julio",
+      "lastName": "Perez",
+      "contractDate": "15/04/2022",
+      "email": "julioperez@gmail.com",
+      "phoneNumber": 992692234
+    },
+    {
+      "id": 7,
+      "firstName": "Joaquin",
+      "lastName": "Diaz",
+      "contractDate": "30/03/2022",
+      "email": "joacodiaz@gmail.com",
+      "phoneNumber": 992051063
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-13",
+      "clientId": 1
+    },
+    {
+      "id": 2,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-21",
+      "clientId": 1
+    },
+    {
+      "id": 3,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-21",
+      "clientId": 1
+    },
+    {
+      "id": 4,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-26",
+      "clientId": 4
+    },
+    {
+      "id": 5,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-16",
+      "clientId": 2
+    },
+    {
+      "id": 6,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-13",
+      "clientId": 2
+    },
+    {
+      "id": 7,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-25",
+      "clientId": 5
+    },
+    {
+      "id": 8,
+      "title": "Discussion team",
+      "description": "this is about the budget to afford good qualities of materials",
+      "startDate": "2022-02-12",
+      "finishDate": "2022-02-20",
+      "clientId": 3
+    }
+  ],
+  "clientComments": [
+    {
+      "id": 1,
+      "photo": "https://1.bp.blogspot.com/---VmcD1y8Yk/XfxKtAO-dEI/AAAAAAAACDM/l1ReV6TqVUIYQ1hMVeiHv7FsChL7plaRACLcBGAsYHQ/s1600/f72a98e76f5512767d5ffaa2bdd2fbd4.jpg",
+      "name": "Julio Barrios",
+      "comment": "I like your new product",
+      "date": "2022-03-01"
+    },
+    {
+      "id": 2,
+      "photo": "https://1.bp.blogspot.com/-wnoCDvVZgP8/YTkJMnivmNI/AAAAAAAAHV8/FECo4a4tMMks8liNAIqz6hmKiLQI6bdngCLcBGAsYHQ/s610/Screenshot_20210908-195132_1.png",
+      "name": "Anderson Barrios",
+      "comment": "I don't like ur product",
+      "date": "2022-03-01"
+    },
+    {
+      "id": 3,
+      "photo": "https://www.labsaenzrenauld.com/wp-content/uploads/2020/10/Perfil-hombre-ba%CC%81sico_738242395.jpg",
+      "name": "Luis Ramirez",
+      "comment": "I have a doubt about your product",
+      "date": "2022-03-01"
+    }
+  ]
+}

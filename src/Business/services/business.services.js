@@ -22,4 +22,7 @@ export class BusinessServices{
     getProjectById(id){
         return http.get(`/projects/${id}`)
     }
+    createProject(data){
+        return http.post("/projects", data)
+    }
 }

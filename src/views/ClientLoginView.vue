@@ -15,7 +15,7 @@
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               @click:append="showPassword =! showPassword"/>
         </v-card-text>
-        <v-btn size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-account-plus</v-icon>Client Login</v-btn>
+        <v-btn @click="login" size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-account-plus</v-icon>Client Login</v-btn>
       </v-form>
 
 
@@ -77,11 +77,25 @@ export default {
 
   },
   methods: {
-    login(card) {
+    login() {
       this.authenticationService = new AuthenticationServices();
       console.log(this.form)
       this.authenticationService.loginClient(this.form).then((response)=>{
         console.log(response)
+        if(response.data.length>0){
+          if(this.form.password === response.data[0].password){
+            console.log("Inicio sesion")
+            this.$router.push({
+              name:"client-portfolio"
+            })
+          }
+          else{
+            console.log("Contraseña incorrecta")
+          }
+        }
+        else{
+          console.log("Usuario no encontrado")
+        }
       })
     }
   }

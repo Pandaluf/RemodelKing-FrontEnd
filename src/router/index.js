@@ -139,7 +139,8 @@ const routes = [
         path: '/UserType',
         name: 'UserType',
         component: UserType
-    }
+    },
+
 ]
 
 const router = createRouter({

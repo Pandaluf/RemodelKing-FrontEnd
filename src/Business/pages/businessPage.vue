@@ -51,13 +51,18 @@
     </v-row>
   </div>
   <footer-component class="footer" />
+  <comments/>
 </template>
 
 <script>
 import {BusinessServices} from "../services/business.services";
+import comments from "./comments.vue";
 
 export default {
   name: "businessPage",
+  components: {
+    comments
+  },
   data(){
     return{
       business: {},

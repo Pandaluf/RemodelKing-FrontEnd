@@ -332,6 +332,13 @@
       "name": "Luis Ramirez",
       "comment": "I have a doubt about your product",
       "date": "2022-03-01"
+    },
+    {
+      "comment": "I had a lot of issues about the service offered.",
+      "date": "25/5/2022",
+      "photo": "https://pbs.twimg.com/profile_images/1185798852/anonimo2_400x400.jpg",
+      "name": "anonymous",
+      "id": 4
     }
   ]
 }

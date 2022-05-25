@@ -1,4 +1,5 @@
 <template>
+  <AddProject :dialog="dialog"></AddProject>
   <v-div class="container">
     <v-row no-gutters>
       <v-col
@@ -51,11 +52,19 @@
           sm="6"
           md="6"
       >
-        <div style="background: black;text-align: center;" v-if="JSON.parse(JSON.parse(JSON.stringify(this.$route.params.data))).proyects.length > 0">
+        <v-btn style = "left: 500px;
+               background: #2e7fce;
+               top: 50px;
+               color: black"
+               rounded
+               elevation="10"
+               @click = "dialog=true" >
+          New project</v-btn>
+        <div style="background: black;text-align: center;">
           <p style="color: white;padding: 10px;">Projects</p>
           <div style="display: flex; padding: 8px;max-width: 100%;overflow-x: auto;">
             <div style="margin: 10px;" v-for="(proyect, index) in JSON.parse(JSON.parse(JSON.stringify(this.$route.params.data))).proyects" v-bind:key="index" >
-                <v-img :src="proyect" style="width: 150px; height: 150px;"></v-img>
+              <v-img :src="proyect" style="width: 150px; height: 150px;"></v-img>
             </div>
           </div>
         </div>
@@ -72,8 +81,12 @@
 
 <script>
 import {BusinessServices} from "../services/business.services";
+import AddProject from "../../components/AddProject.vue";
 export default {
   name: "BusinessProfileEdited",
+  components:{
+    AddProject: AddProject
+  },
   data() {
     return{
       valid: true,
@@ -104,6 +117,7 @@ export default {
         logo: '',
         proyects: []
       },
+      dialog: false
     }
   },
   created() {
@@ -142,6 +156,6 @@ export default {
 }
 .container{
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
 }
 </style>

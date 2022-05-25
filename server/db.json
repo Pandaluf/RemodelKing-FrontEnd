@@ -1,61 +1,5 @@
 {
   "client": [
-    {
-      "id": 1,
-      "email": "leo@gmail.com",
-      "password": "leo12345",
-      "name": "Lonardo",
-      "phone": 978456123
-    },
-    {
-      "id": 1,
-      "email": "leo@gmail.com",
-      "password": "leo12345",
-      "name": "Lonardo",
-      "phone": 978456123
-    },
-    {
-      "Name": "Jose",
-      "Email": "abc@gmail.com",
-      "Password": "230076715",
-      "ConfirmPassword": "230076715",
-      "id": 2
-    },
-    {
-      "Name": "Jose",
-      "Email": "abc@gmail.com",
-      "Password": "230076715",
-      "ConfirmPassword": "230076715",
-      "id": 3
-    },
-    {
-      "Name": "Jose",
-      "Email": "abc@gmail.com",
-      "Password": "230076715",
-      "ConfirmPassword": "230076715",
-      "id": 4
-    },
-    {
-      "Name": "Jose",
-      "Email": "abc@gmail.com",
-      "Password": "230076715",
-      "ConfirmPassword": "230076715",
-      "id": 5
-    },
-    {
-      "Name": "Jose",
-      "Email": "abc@gmail.com",
-      "Password": "230076715",
-      "ConfirmPassword": "230076715",
-      "id": 6
-    },
-    {
-      "Name": "Jose",
-      "Email": "abc@gmail.com",
-      "Password": "230076715",
-      "ConfirmPassword": "230076715",
-      "id": 7
-    }
   ],
   "Business": [
     {
@@ -72,11 +16,13 @@
       "endOfCustomerService": 0,
       "days": "Friday-Saturday-Sunday",
       "flex": 4,
-      "phone": "987654321"
+      "phone": "987654321",
+      "email": "antaresarquitecto@gmail.com",
+      "password": "123456"
     },
     {
       "id": 2,
-      "name": "ArribaPeru",
+      "name": "GoPeru",
       "projects": 0,
       "description": "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
       "img": "https://images.pexels.com/photos/6420235/pexels-photo-6420235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -88,7 +34,9 @@
       "endOfCustomerService": 0,
       "days": "Thursday-Friday",
       "flex": 4,
-      "phone": "987654321"
+      "phone": "987654321",
+      "email": "arribaperu@gmail.com",
+      "password": "123456"
     },
     {
       "id": 3,
@@ -104,7 +52,9 @@
       "endOfCustomerService": 0,
       "days": "Monday-Wednesday-Friday",
       "flex": 4,
-      "phone": "987654321"
+      "phone": "987654321",
+      "email": "somoscivil@gmail.com",
+      "password": "123456"
     },
     {
       "id": 4,
@@ -120,7 +70,9 @@
       "endOfCustomerService": 0,
       "days": "Monday-Tuesday-Wednesday",
       "flex": 4,
-      "phone": "987654321"
+      "phone": "987654321",
+      "email": "malaga@gmail.com",
+      "password": "123456"
     },
     {
       "id": 5,
@@ -136,7 +88,9 @@
       "endOfCustomerService": 0,
       "days": "Tuesday-Thursday-Friday",
       "flex": 4,
-      "phone": "987654321"
+      "phone": "987654321",
+      "email": "antares@gmail.com",
+      "password": "123456"
     },
     {
       "id": 6,
@@ -152,7 +106,9 @@
       "endOfCustomerService": 0,
       "days": "Monday-Tuesday-Wednesday",
       "flex": 4,
-      "phone": "987654321"
+      "phone": "987654321",
+      "email": "antares2@gmail.com",
+      "password": "123456"
     }
   ],
   "projects": [

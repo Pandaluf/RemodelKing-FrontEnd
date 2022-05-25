@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import BusinessInfo from "../views/BusinessInfo.vue";
 import YourBusiness from "../views/YourBusiness.vue";
 import Payments from "../views/Payments.vue";
 import BusinessPage from "../Business/pages/businessPage.vue";
@@ -138,7 +139,8 @@ const routes = [
         path: '/UserType',
         name: 'UserType',
         component: UserType
-    }
+    },
+
 ]
 
 const router = createRouter({

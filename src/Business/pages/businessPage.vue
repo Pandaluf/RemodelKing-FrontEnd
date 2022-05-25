@@ -60,7 +60,7 @@ import comments from "./comments.vue";
 
 export default {
   name: "businessPage",
-  components: {
+  components:{
     comments
   },
   data(){

@@ -52,7 +52,7 @@
           md="6"
       >
         <div style="background: black;text-align: center;">
-          <p style="color: white;padding: 10px;">Projects <v-btn style="left: 200; background: #80bb4e; color: black">New project</v-btn></p>
+          <p style="color: white;padding: 10px;">Projects <v-btn style="left: 200px; background: #80bb4e; color: black">New project</v-btn></p>
 
           <div style="display: flex; padding: 8px;max-width: 100%;overflow-x: auto;">
             <div style="margin: 10px;" v-for="(project, index) in projects" >

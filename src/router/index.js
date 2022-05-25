@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import clientPortfolio from "../views/client-portfolio.vue";
-import client from "../views/client.vue";
-import BusinessInfo from "../views/BusinessInfo.vue";
 import YourBusiness from "../views/YourBusiness.vue";
 import Payments from "../views/Payments.vue";
 import BusinessPage from "../Business/pages/businessPage.vue";
@@ -20,6 +17,8 @@ import CompanyLogin from "../views/LoginBusiness/CompanyLogin.vue";
 import CompanyRegister from "../views/LoginBusiness/CompanyRegister.vue";
 import PayWithCard from "../views/PayWithCard.vue";
 import UserType from "../views/UserType.vue";
+import clientPortfolio from "../views/Porfolio/pages/client-portfolio.vue";
+import client from "../views/Porfolio/pages/client.vue";
 const routes = [
     {
         path: '/',

@@ -14,8 +14,8 @@
               prepend-icon="mdi-lock"
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               @click:append="showPassword =! showPassword"/>
+          <v-btn @click="login" size="50px" width="120px" color="#FFFFFF">Client Login</v-btn>
         </v-card-text>
-        <v-btn @click="login" size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-account-plus</v-icon>Client Login</v-btn>
       </v-form>
 
 
@@ -99,7 +99,6 @@ export default {
       })
     }
   }
-
 }
 
 </script>

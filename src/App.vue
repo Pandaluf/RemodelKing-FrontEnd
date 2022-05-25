@@ -5,9 +5,25 @@
         <v-toolbar-text class="name" style="margin-top: 18px; font-size: 25px; color:ghostwhite">RemodelKing</v-toolbar-text>
         <v-btn style="margin-top: 18px; font-size: 25px;"> <v-icon>mdi-bell</v-icon> </v-btn>
         <v-spacer></v-spacer>
-        <router-link to="/Login" class="text-decoration-none" style="margin-top: 56px; border-style: solid; border-color: black; background-color: #984857;">
-          <v-btn size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-login-variant</v-icon>  Log in</v-btn>
-        </router-link>
+
+        <div class="text-decoration-none" style="margin-top: 56px; border-style: solid; border-color: black; background-color: #984857;">
+
+          <v-btn id="menu-activator" size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-login-variant</v-icon>Log in</v-btn>
+          <v-menu activator="#menu-activator">
+            <v-list>
+              <v-list-item
+                  v-for="(item, index) in items"
+                  :key="index"
+                  :value="index"
+              >
+                <router-link :to="`${item.url}`" class="text-decoration-none">
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </router-link>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </div>
+
         <router-link to="/Register" class="text-decoration-none" style="margin-top: 56px; margin-right: 15px; margin-left: 10px; border-style: solid; border-color: black; background-color: #984857">
           <v-btn size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-account-plus</v-icon>  Register</v-btn>
         </router-link>
@@ -46,9 +62,18 @@ export default {
 
   data: () => ({
     drawer: false,
-    logo: logo
+    logo: logo,
+    items: [
+      {
+        title:'Business',
+        url:'/CompanyLogin'
+      },
+      {
+        title:'Client',
+        url:'/ClientLogin'
+      }
+    ]
   }),
-
 }
 </script>
 

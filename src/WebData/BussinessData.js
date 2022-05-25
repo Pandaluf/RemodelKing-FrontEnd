@@ -1,0 +1,28 @@
+export class BussinessData{
+    static cards = [
+        {id: 1, name: 'Antares Arquitectos', proyects: 0, description: "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+            img: "https://images.pexels.com/photos/2468056/pexels-photo-2468056.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", Adress:"Montes Urales 755, 11000, Ciudad de México, Miguel Hidalgo",
+            score:4, WebSite:"https://www.universidadperu.com/empresas/construcciones-generales.php", Show: false, startOfCustomerService: 0,
+            endOfCustomerService: 0, days: "Friday-Saturday-Sunday", flex: 4, phone: "987654321"},
+        {id: 2, name: 'ArribaPeru', proyects: 0, description: "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+            img: "https://images.pexels.com/photos/6420235/pexels-photo-6420235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", Adress:"Centro de Lima, Lima, Perú",
+            score:3.2, WebSite:"https://www.universidadperu.com/empresas/construcciones-generales.php", Show: false, startOfCustomerService: 0,
+            endOfCustomerService: 0, days: "Thursday-Friday", flex: 4, phone: "987654321"},
+        {id: 3, name: 'SomosCivilArt', proyects: 0, description: "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+            img: "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", Adress:"Chiclayo, Lima, Perú",
+            score:4, WebSite:"https://www.universidadperu.com/empresas/construcciones-generales.php", Show: false, startOfCustomerService: 0,
+            endOfCustomerService: 0, days: "Monday-Wednesday-Friday", flex: 4, phone: "987654321"},
+        {id: 4, name: 'MALAGA', proyects: 0, description: "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+            img: "https://images.pexels.com/photos/389819/pexels-photo-389819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", Adress:"Trujillo, Perú",
+            score:4, WebSite:"https://www.universidadperu.com/empresas/construcciones-generales.php", Show: false, startOfCustomerService: 0,
+            endOfCustomerService: 0, days: "Monday-Tuesday-Wednesday", flex: 4, phone: "987654321"},
+        {id: 5, name: 'Antares Arquitectos', proyects: 0, description: "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+            img: "https://images.pexels.com/photos/3183199/pexels-photo-3183199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", Adress:"Nazca, Ica, Perú",
+            score:4, WebSite:"https://www.universidadperu.com/empresas/construcciones-generales.php", Show: false, startOfCustomerService: 0,
+            endOfCustomerService: 0, days: "Tuesday-Thursday-Friday", flex: 4, phone: "987654321"},
+        {id: 6, name: 'Antares Arquitectos', proyects: 0, description: "Somos una empresa de diseño arquitectónico de alto nivel y construcción que busca siempre la innovación y vanguardia; totalmente competente con los mejores despachos de México, ofrece plena satisfacción, diseños estéticos y sustentables.\n Implementamos metodologías para dar identidad y valor a los proyectos desde el concepto, el diseño de interior, hasta las técnicas más avanzadas en domótica.",
+            img: "https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", Adress:"Chorrillos, Lima, Peru",
+            score:4, WebSite:"https://www.universidadperu.com/empresas/construcciones-generales.php", Show: false, startOfCustomerService: 0,
+            endOfCustomerService: 0, days: "Monday-Tuesday-Wednesday", flex: 4, phone: "987654321"},
+    ]
+}

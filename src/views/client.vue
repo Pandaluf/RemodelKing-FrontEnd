@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import {Data} from "../data-client-portfolio/data.js";
+import {Data} from "../WebData/data.js";
 export default {
   name: "client",
   data(){

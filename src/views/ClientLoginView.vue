@@ -2,15 +2,22 @@
   <v-content>
     <v-card width="800" class="mx-auto mt-9">
       <v-card-title>Client Log in</v-card-title>
-      <v-card-text>
-        <v-text-field label="Username" prepend-icon="mdi-account-circle"/>
-        <v-text-field
-            label="Password"
-            :type="showPassword ? 'text' : 'password'"
-            prepend-icon="mdi-lock"
-            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-            @click:append="showPassword =! showPassword"/>
-      </v-card-text>
+      <v-form
+          ref = "form"
+      >
+        <v-card-text>
+          <v-text-field v-model="form.email" label="email" prepend-icon="mdi-account-circle"/>
+          <v-text-field
+              v-model="form.password"
+              label="Password"
+              :type="showPassword ? 'text' : 'password'"
+              prepend-icon="mdi-lock"
+              :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+              @click:append="showPassword =! showPassword"/>
+        </v-card-text>
+        <v-btn size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-account-plus</v-icon>Client Login</v-btn>
+      </v-form>
+
 
       <v-divider></v-divider>
       <v-card-actions class ="text-center">
@@ -49,14 +56,33 @@
 </template>
 
 <script>
+import {AuthenticationServices} from "../Authentication/Services/Authentication.services";
+
 export default {
   name: "ClientLoginView",
 
   data()
   {
     return{
-      showPassword:false
+      showPassword:false,
+      authenticationService:null,
+      form: {
+        email:'',
+        password:''
+      }
+    }
+  },
 
+  created() {
+
+  },
+  methods: {
+    login(card) {
+      this.authenticationService = new AuthenticationServices();
+      console.log(this.form)
+      this.authenticationService.loginClient(this.form).then((response)=>{
+        console.log(response)
+      })
     }
   }
 

@@ -15,6 +15,9 @@ import RequestHistory from "../views/RequestHistory.vue";
 import BusinessProfile from "../Business/pages/BusinessProfile.vue";
 import ProjectProfile from "../Business/pages/ProjectProfile.vue";
 import BusinessProfileEdited from "../Business/pages/BusinessProfileEdited.vue";
+import ClientLoginView from "../views/ClientLoginView.vue";
+import ClientRegisterView from "../views/ClientRegisterView.vue";
+import ForgotPasswordClientView from "../views/ForgotPasswordClientView.vue";
 
 const routes = [
     {
@@ -96,6 +99,21 @@ const routes = [
         path: '/business/info/:id',
         name: 'businessEdited',
         component: BusinessProfileEdited
+    },
+    {
+        path:"/ClientloginView",
+        name:'ClientLogin',
+        component:ClientLoginView
+    },
+    {
+        path:"/ClientRegisterView",
+        name:"ClientRegister",
+        component:ClientRegisterView
+    },
+    {
+        path:"/ForgotPasswordClientView",
+        name:"PasswordClient",
+        component:ForgotPasswordClientView
     }
 ]
 

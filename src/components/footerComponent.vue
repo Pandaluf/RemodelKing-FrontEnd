@@ -1,5 +1,5 @@
 <template>
-  <v-card class="flex footer" flat tile>
+  <v-card class="flex footer mt-8" flat tile>
     <v-card-title class="teal">
       <v-row>
         <v-col cols="12" md="6" class="text-center">

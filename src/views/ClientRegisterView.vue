@@ -2,7 +2,7 @@
   <div class = "card-register">
     <v-content class = "mx-auto ">
       <v-card max-width="700" min-width="700" class="mx-auto mt-9 ">
-        <v-card-title>Log in</v-card-title>
+        <v-card-title>Register Client</v-card-title>
         <v-card-text>
           <v-text-field label="Name" prepend-icon="mdi-account-circle"/>
           <v-text-field label="Email" prepend-icon="mdi-email"/>
@@ -10,7 +10,6 @@
                         :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'" @click:append="showPassword =! showPassword"/>
           <v-text-field label="Confirm Password" :type="showPassword ? 'text' : 'password'" prepend-icon="mdi-lock-check"
                         :append-icon="showPassword ? 'mdi-lock-check' : 'mdi-eye-off'" @click:append="showPassword =! showPassword"/>
-          <v-text-field label="Phone" prepend-icon="mdi-cellphone"/>
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
@@ -21,7 +20,6 @@
     <dialog-login :dialog = "dialog" />
   </div>
 </template>
-
 <script>
 import dialogLogin from "../components/dialogLogin.vue";
 export default {
@@ -29,8 +27,8 @@ export default {
   components: {
     dialogLogin
   },
-  data (){
-    return{
+  data() {
+    return {
       showPassword: false,
       dialog: false
     }
@@ -39,12 +37,12 @@ export default {
 </script>
 
 <style scoped>
-  v-main{
-    padding: 0;
-  }
-  .footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-  }
+v-main{
+  padding: 0;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 </style>

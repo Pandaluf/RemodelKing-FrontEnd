@@ -1,0 +1,26 @@
+{
+  "Titles": {
+    "View-Remodel-King": "View Remodel King",
+    "Company-Progress": "Company Progress",
+    "Portfolio": "Portfolio",
+    "Your-Business": "Your Business"
+  },
+  "Register": "Register",
+  "Log-in": "Log in",
+  "Home": "Home",
+  "Growth-Analisys": "Growth Analisys",
+  "Footer": "Get connected with us on social networks!",
+  "Business": {
+    "Rate-this-business": "Rate this business",
+    "Rate-opinions": "Rate and opinions",
+    "Edit-Profile": "EDIT PROFILE",
+    "Business-name": "Business name",
+    "Address": "Address",
+    "Phone": "Phone",
+    "WebSite": "WebSite",
+    "Attention-Days": "Attention Days",
+    "Projects": "Projects",
+    "Description": "Description",
+    "NEW-PROJECT": "NEW PROJECT"
+  }
+}

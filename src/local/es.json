@@ -1,0 +1,26 @@
+{
+  "Titles": {
+    "View-Remodel-King": "Ver Empresas Remdeladoras",
+    "Company Progress": "Progreso de la Empresa",
+    "Portfolio": "Portafolio",
+    "Your-Business": "Tú Empresa"
+  },
+  "Register": "Registrate",
+  "Log-in": "Iniciar Sesión",
+  "Home": "Casa",
+  "Growth-Analisys": "Análisis de crecimiento",
+  "Footer": "¡Conéctate con nosotros en las redes sociales!",
+  "Business": {
+    "Rate-this-business": "Calica este negocio",
+    "Rate-opinions": "Calificaciones y opiniones",
+    "Edit-Profile": "EDITAR PERFIL",
+    "Business-name": "Nombre de la empresa",
+    "Address": "Dirección",
+    "Phone": "Teléfono",
+    "WebSite": "Sitio Web",
+    "Attention-Days": "D{ias de atención",
+    "Projects": "Proyectos",
+    "Description": "Descripción",
+    "NEW-PROJECT": "NUEVO PROYECTO"
+  }
+}

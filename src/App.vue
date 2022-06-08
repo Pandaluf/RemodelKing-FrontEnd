@@ -52,13 +52,31 @@
     <router-view/>
 
   </v-app>
+<<<<<<< Updated upstream
+=======
+  <footer-component class="footer" />
+  <div>{{service}}</div>
+>>>>>>> Stashed changes
 </template>
 
 <script>
 export default {
   data: () => ({
     drawer: false,
+<<<<<<< Updated upstream
   }),
+=======
+    logo: logo,
+    items: [
+      {
+        title:'Business'
+      },
+      {
+        title:'Client'
+      }
+    ],
+  })
+>>>>>>> Stashed changes
 }
 </script>
 

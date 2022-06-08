@@ -1,26 +1,84 @@
 {
   "Titles": {
-    "View-Remodel-King": "Ver Empresas Remdeladoras",
-    "Company Progress": "Progreso de la Empresa",
+    "View-Remodel-King": "Ver Empresas Remodeladoras",
+    "Company-Progress": "Progreso de la Empresa",
     "Portfolio": "Portafolio",
+    "Client-Portfolio": "Portafolio Clientes",
     "Your-Business": "Tú Empresa"
   },
-  "Register": "Registrate",
-  "Log-in": "Iniciar Sesión",
-  "Home": "Casa",
+  "Clients-Portfolio": "Portafolio Cliente: ",
+  "Register": "Registrar",
+  "Log-in": "Acceder",
+  "Home": "Inicio",
+  "View-Business": "Ver Empresa",
   "Growth-Analisys": "Análisis de crecimiento",
   "Footer": "¡Conéctate con nosotros en las redes sociales!",
   "Business": {
-    "Rate-this-business": "Calica este negocio",
+    "Rate-this-business": "Califica este negocio",
     "Rate-opinions": "Calificaciones y opiniones",
     "Edit-Profile": "EDITAR PERFIL",
-    "Business-name": "Nombre de la empresa",
-    "Address": "Dirección",
-    "Phone": "Teléfono",
-    "WebSite": "Sitio Web",
-    "Attention-Days": "D{ias de atención",
+    "Business-name": "Nombre de la empresa: ",
+    "Address": "Dirección: ",
+    "Phone": "Teléfono: ",
+    "WebSite": "Sitio Web: ",
+    "Attention-Days": "Días de atención: ",
     "Projects": "Proyectos",
     "Description": "Descripción",
-    "NEW-PROJECT": "NUEVO PROYECTO"
+    "NEW-PROJECT": "NUEVO PROYECTO",
+    "Score": "Puntos: ",
+    "Start-Attention": "Inicio de Atención: ",
+    "End-Attention": "Cierre de Atención: ",
+    "Attention-days": "Días de Atención: "
+  },
+  "Months": "Meses",
+  "Profits": "Beneficios",
+  "Progress":{
+    "History": "Historial de ventas por meses",
+    "subtitle": "es un diagrama que muestra las ventas por meses"
+  },
+  "Month": {
+    "January": "Enero",
+    "February": "Febrero",
+    "March": "Marzo",
+    "April": "Abril",
+    "May": "Mayo",
+    "June": "Junio",
+    "July": "Julio",
+    "August": "Agosto",
+    "September": "Septiembre",
+    "October": "Octubre",
+    "November": "Noviembre",
+    "December": "Diciembre"
+  },
+  "Client": {
+    "Name": "Nombre: ",
+    "Contract-date": "Fecha de contrato: ",
+    "Email": "Correo: ",
+    "Phone-number": "Número de teléfono: "
+  },
+  "More": "Ver más",
+  "Activities": "Actividades",
+  "Add-Activity": "+ Actividad",
+  "Activity": {
+    "Description": "Descripción: ",
+    "Start-date": "Fecha de inicio: ",
+    "Finish-date": "Fecha de finalización: "
+  },
+  "Update": "Actualizar",
+  "Delete": "Eliminar",
+  "Project": {
+    "Projects": "Projects",
+    "Rate-this-project": "Califica este proyecto",
+    "Rate-opinions": "Calificaciones y opiniones",
+    "Style": "Estilo: ",
+    "Description": "Descripción: ",
+    "Localization": "Localización: "
+  },
+  "Update-Information": "ACTUALIZAR INFORMACIÓN",
+  "UserType": {
+    "Business": "Soy una Empresa",
+    "Client": "Soy un Cliente",
+    "Company-login": "Iniciar sección Empresa",
+    "Client-login": "Iniciar sección Cliente"
   }
 }

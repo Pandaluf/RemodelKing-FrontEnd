@@ -1,6 +1,6 @@
 <template xmlns="http://www.w3.org/1999/html">
   <div style="text-align: center">
-    <h1 class="Tittles">View Remodeling Companies</h1>
+    <h1 class="Tittles">{{ $t('Titles.View-Remodel-King')}}</h1>
     <v-icon style="margin-right: 15px; font-size: 35px;">mdi-magnify</v-icon>
     <input type="text" v-model="filterField" class="input">
   </div>
@@ -15,12 +15,12 @@
               {{ card.name }}
             </v-card-title>
             <v-card-subtitle>
-              score: {{ card.score }}
+              {{ $t('Business.Score') }} {{ card.score }}
             </v-card-subtitle>
             <v-card-actions>
               <router-link :to="{path:`/Home/Business/${card.id}`}" class="text-decoration-none">
                 <v-btn color="orange lighten-2" text @click="">
-                  View Bussiness
+                  {{ $t('View-Business') }}
                 </v-btn>
               </router-link>
               <v-spacer></v-spacer>
@@ -32,11 +32,11 @@
               <div v-show="card.show">
                 <v-divider></v-divider>
                 <v-card-text>
-                  Start Attention: {{card.startOfCustomerService}}
+                  {{ $t('Business.Start-Attention') }} {{card.startOfCustomerService}}
                   <br>
-                  End Attention: {{card.endOfCustomerService}}
+                  {{ $t('Business.End-Attention') }} {{card.endOfCustomerService}}
                   <br>
-                  attention days: {{card.days}}
+                  {{ $t('Business.Attention-days') }} {{card.days}}
                 </v-card-text>
               </div>
             </v-expand-transition>

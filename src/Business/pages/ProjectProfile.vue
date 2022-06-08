@@ -7,12 +7,12 @@
           <h2>{{business.name}}</h2>
           <div>
             <br>
-            <p style="font-size: 20px">Rate this business</p>
+            <p style="font-size: 20px">{{ $t('Project.Rate-this-project') }}</p>
             <v-rating v-model="rating" background-color="orange lighten-3" color="orange" size="40"></v-rating>
           </div>
           <div>
             <br>
-            <p style="font-size: 20px">Rate and opinions</p>
+            <p style="font-size: 20px">{{ $t('Project.Rate-opinions') }}</p>
             <v-rating v-model="rating" background-color="orange lighten-3" color="orange" size="40"></v-rating>
           </div>
         </div>

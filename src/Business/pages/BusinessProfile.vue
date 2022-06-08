@@ -7,7 +7,7 @@
           md="6">
         <v-img :src = "business.img" style="width: 200px;height: 200px;"></v-img>
         <div>
-          <p>Rate this business</p>
+          <p>{{ $t('Business.Rate-this-business') }}</p>
           <v-rating
               v-model="rating"
               background-color="orange lighten-3"
@@ -16,7 +16,7 @@
           ></v-rating>
         </div>
         <div>
-          <p>Rate and opinions</p>
+          <p>{{ $t('Business.Rate-opinions') }}</p>
           <v-rating
               v-model="rating"
               background-color="orange lighten-3"
@@ -34,15 +34,15 @@
                   color="light-green darken-1"
                   elevation="6"
                   rounded>
-                Edit profile</v-btn>
+                {{ $t('Business.Edit-Profile') }}</v-btn>
             </router-link>
           </div>
           <div style="background: #BAE2E2;padding: 18px;display: grid; border-radius: 12px; width: 90%; margin-top: 15px">
-            <span><b>Business name: </b> {{ business.name }}</span>
-            <span><b>Address: </b> {{ business.address }}</span>
-            <span><b>Phone: </b> {{ business.phone }}</span>
-            <span><b>WebSite: </b> <a href=´${{business.webSite}}´>{{ business.webSite }}</a> </span>
-            <span><b>Attention days: </b> {{ business.days }}</span>
+            <span><b>{{ $t('Business.Business-name') }} </b> {{ business.name }}</span>
+            <span><b>{{ $t('Business.Address') }} </b> {{ business.address }}</span>
+            <span><b>{{ $t('Business.Phone') }} </b> {{ business.phone }}</span>
+            <span><b>{{ $t('Business.WebSite') }} </b> <a href=´${{business.webSite}}´>{{ business.webSite }}</a> </span>
+            <span><b>{{ $t('Business.Attention-Days') }} </b> {{ business.days }}</span>
           </div>
         </div>
 
@@ -59,9 +59,9 @@
                rounded
                elevation="10"
                @click = "dialog=true" >
-          New project</v-btn>
+          {{ $t('Business.NEW-PROJECT') }}</v-btn>
         <div style="background: black;text-align: center;">
-          <p style="color: white;padding: 10px;">Projects</p>
+          <p style="color: white;padding: 10px;">{{ $t('Project.Projects') }}</p>
           <div style="display: flex; padding: 8px;max-width: 100%;overflow-x: auto;">
             <div style="margin: 10px;" v-for="(project, index) in projects" >
               <router-link :to= "{path:`/business/info/${business.id}/project/info/${project.id}`}">
@@ -73,7 +73,7 @@
         </div>
 
         <div style="padding: 20px;border: 2px solid black;margin-top: 20px;">
-          <p><b>Description:</b></p>
+          <p><b>{{ $t('Business.Description') }}</b></p>
           <p class="text-justify">{{business.description}}</p>
         </div>
       </v-col>

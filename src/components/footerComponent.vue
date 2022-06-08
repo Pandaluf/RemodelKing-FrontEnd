@@ -3,7 +3,7 @@
     <v-card-title class="teal">
       <v-row>
         <v-col cols="12" md="6" class="text-center">
-          <strong class="subheading">Get connected with us on social networks!</strong>
+          <strong class="subheading">{{ $t('Footer') }}</strong>
         </v-col>
         <v-col cols="12" md="6" class="text-center">
           <v-spacer></v-spacer>

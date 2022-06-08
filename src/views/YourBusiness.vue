@@ -1,10 +1,10 @@
 <template>
-  <h1 class="title">Your business</h1>
+  <h1 class="title">{{ $t('Titles.Your-Business') }}</h1>
   <v-container>
     <v-form ref="form" v-model="valid" lazy-validation>
       <div style="width: 100%; display: flex; justify-content: center;">
         <v-col class="labelForm" cols="12" sm="2" md="2">
-          <smal><b>Business name:</b></smal>
+          <smal><b>{{ $t('Business.Business-name') }}</b></smal>
         </v-col>
         <v-col cols="12" sm="6" md="6">
           <v-text-field v-model="form.name" :rules="nameRules" label="Name" required></v-text-field>
@@ -12,7 +12,7 @@
       </div>
       <div style="width: 100%; display: flex; justify-content: center;">
         <v-col class="labelForm" cols="12" sm="2" md="2">
-          <smal><b>Address:</b></smal>
+          <smal><b>{{ $t('Business.Address') }}</b></smal>
         </v-col>
         <v-col cols="12" sm="6" md="6">
           <v-text-field v-model="form.address" :rules="addressRules" label="Address" required></v-text-field>
@@ -20,7 +20,7 @@
       </div>
       <div style="width: 100%; display: flex; justify-content: center;">
         <v-col class="labelForm" cols="12" sm="2" md="2">
-          <smal><b>Phone:</b></smal>
+          <smal><b>{{ $t('Business.Phone') }}</b></smal>
         </v-col>
         <v-col cols="12" sm="6" md="6">
           <v-text-field v-model="form.phone" :rules="phoneRules" label="Phone" required></v-text-field>
@@ -28,7 +28,7 @@
       </div>
       <div style="width: 100%; display: flex; justify-content: center;">
         <v-col class="labelForm" cols="12" sm="2" md="2">
-          <smal><b>WebSite:</b></smal>
+          <smal><b>{{ $t('Business.WebSite') }}</b></smal>
         </v-col>
         <v-col cols="12" sm="6" md="6">
           <v-text-field v-model="form.webSite" :rules="webRules" label="WebSite" required></v-text-field>
@@ -36,7 +36,7 @@
       </div>
       <div style="width: 100%; display: flex; justify-content: center;">
         <v-col class="labelForm" cols="12" sm="2" md="2">
-          <smal><b>Attention days:</b></smal>
+          <smal><b>{{ $t('Business.Attention-Days') }}</b></smal>
         </v-col>
         <v-col cols="12" sm="6" md="6">
           <v-text-field v-model="form.days" :rules="attentionDaysRules" label="Attention days" required></v-text-field>
@@ -44,7 +44,7 @@
       </div>
     </v-form>
     <div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-      <v-btn color="#76c03c" @click="updateBusiness()">Update Information</v-btn>
+      <v-btn color="#76c03c" @click="updateBusiness()">{{ $t('Update-Information') }}</v-btn>
     </div>
   </v-container>
 </template>

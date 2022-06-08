@@ -1,7 +1,7 @@
 <template>
   <v-main>
-    <h1 class="title">Company Progress</h1>
-    <h2 class="analisys">Growth Analisys</h2>
+    <h1 class="title">{{ $t('Titles.Company-Progress') }}</h1>
+    <h2 class="analisys">{{ $t('Growth-Analisys') }}</h2>
     <Estadistic></Estadistic>
   </v-main>
 </template>

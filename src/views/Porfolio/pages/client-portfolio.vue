@@ -1,19 +1,19 @@
 <template>
-  <h1 class="text-capitalize text-center my-10">client portfolio</h1>
+  <h1 class="text-capitalize text-center my-10">{{ $t('Titles.Client-Portfolio') }}</h1>
   <v-container>
     <v-row>
       <v-col v-for="info in clientInfo" :key="info.id" cols="12" md="6" lg="4" class="white--text">
         <v-card color="#393939" class="rounded-xl w-80 ma-auto">
           <v-card-text class="text-white text-clamp lh-40">
-            <div class="lh-40 font-weight-bold">Name: {{info.firstName}} {{info.lastName}}</div>
-            <div class="lh-40">Contract date: {{info.contractDate}}</div>
-            <div class="lh-40">Email: {{info.email}}</div>
-            <div class="lh-40">Phone number: {{info.phoneNumber}}</div>
+            <div class="lh-40 font-weight-bold">{{ $t('Client.Name') }} {{info.firstName}} {{info.lastName}}</div>
+            <div class="lh-40">{{ $t('Client.Contract-date') }} {{info.contractDate}}</div>
+            <div class="lh-40">{{ $t('Client.Email') }} {{info.email}}</div>
+            <div class="lh-40">{{ $t('Client.Phone-number') }} {{info.phoneNumber}}</div>
           </v-card-text>
           <v-card-actions>
             <router-link :array="clientInfo" :to="{path: `/client-portfolio/client/${info.id}`}"
                          class="text-decoration-none list-style-none">
-              <v-btn color="#76C03C">More</v-btn>
+              <v-btn color="#76C03C">{{ $t('More') }}</v-btn>
             </router-link>
           </v-card-actions>
         </v-card>

@@ -1,0 +1,84 @@
+{
+  "Titles": {
+    "View-Remodel-King": "View Remodel King",
+    "Company-Progress": "Company Progress",
+    "Portfolio": "Portfolio",
+    "Client-Portfolio": "Clients Portfolio",
+    "Your-Business": "Your Business"
+  },
+  "Clients-Portfolio": "Client Portfolio: ",
+  "Register": "Register",
+  "Log-in": "Log in",
+  "Home": "Home",
+  "View-Business": "View Business",
+  "Growth-Analisys": "Growth Analisys",
+  "Footer": "Get connected with us on social networks!",
+  "Business": {
+    "Rate-this-business": "Rate this business",
+    "Rate-opinions": "Rate and opinions",
+    "Edit-Profile": "EDIT PROFILE",
+    "Business-name": "Business name: ",
+    "Address": "Address: ",
+    "Phone": "Phone: ",
+    "WebSite": "WebSite: ",
+    "Attention-Days": "Attention Days: ",
+    "Projects": "Projects",
+    "Description": "Description",
+    "NEW-PROJECT": "NEW PROJECT",
+    "Score": "Score: ",
+    "Start-Attention": "Start Attention: ",
+    "End-Attention": "End Attention: ",
+    "Attention-days": "Attention days: "
+  },
+  "Months": "Months",
+  "Profits": "Profits",
+  "Progress":{
+    "History": "Sales history by months",
+    "subtitle": "is a diagram showing sales by months"
+  },
+  "Month": {
+    "January": "January",
+    "February": "February",
+    "March": "March",
+    "April": "April",
+    "May": "May",
+    "June": "June",
+    "July": "July",
+    "August": "August",
+    "September": "September",
+    "October": "October",
+    "November": "November",
+    "December": "December"
+  },
+  "Client": {
+    "Name": "Name: ",
+    "Contract-date": "Contract date: ",
+    "Email": "Email: ",
+    "Phone-number": "Phone number: "
+  },
+  "More": "View More",
+  "Activities": "Activities",
+  "Add-Activity": "+ Activity",
+  "Activity": {
+    "Description": "Description: ",
+    "Start-date": "Start date: ",
+    "Finish-date": "Finish date: "
+  },
+  "Update": "Update",
+  "Delete": "Delete",
+  "Project": {
+    "Projects": "Proyectos",
+    "Rate-this-project": "Rate this project",
+    "Rate-opinions": "Rate and opinions",
+    "Style": "Style: ",
+    "Description": "Description: ",
+    "Localization": "Localization: "
+  },
+  "Update-Information": "UPDATE INFORMATION",
+  "UserType": {
+    "Business": "I am a Business",
+    "Client": "I am a Client",
+    "Company-login": "Company Login",
+    "Client-login": "Client Login"
+  }
+}

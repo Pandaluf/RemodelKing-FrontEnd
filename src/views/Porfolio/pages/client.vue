@@ -1,19 +1,19 @@
 <template>
-  <h1 class="text-capitalize text-center my-10">client portfolio: {{client.firstName}} {{client.lastName}}</h1>
+  <h1 class="text-capitalize text-center my-10">{{ $t('Clients-Portfolio') }} {{client.firstName}} {{client.lastName}}</h1>
   <v-card class="ma-10" color="#393939">
     <v-card-text class="text-white lh-40">
-      <div>Contract date: {{client.contractDate}}</div>
-      <div>Email: {{client.email}}</div>
-      <div>Phone number: {{client.phoneNumber}}</div>
+      <div>{{ $t('Client.Contract-date') }} {{client.contractDate}}</div>
+      <div>{{ $t('Client.Email') }} {{client.email}}</div>
+      <div>{{ $t('Client.Phone-number') }} {{client.phoneNumber}}</div>
     </v-card-text>
   </v-card>
-  <h2 class="ml-10" fluid>Activities</h2>
+  <h2 class="ml-10" fluid>{{ $t('Activities') }}</h2>
 
   <div class="text-center">
     <v-dialog v-model="dialog" persistent>
 
       <template v-slot:activator="{ props }">
-          <v-btn  v-bind="props" color="green" @click="createDialog">+ Activities</v-btn>
+          <v-btn  v-bind="props" color="green" @click="createDialog">{{ $t('Add-Activity') }}</v-btn>
       </template>
 
       <v-card>
@@ -61,12 +61,12 @@
   <v-card v-for="(activity, index) in activities" :key="activity.id" class="ma-10" color="#FFAA97">
     <v-card-text>
       <div class="font-weight-bold">{{`Activity ${index+1}: `}}{{activity.title}}</div>
-      <div>Description: {{activity.description}}</div>
-      <div>Start date: {{activity.startDate}}</div>
-      <div>Finish date: {{activity.finishDate}}</div>
+      <div>{{ $t('Activity.Description') }} {{activity.description}}</div>
+      <div>{{ $t('Activity.Start-date') }} {{activity.startDate}}</div>
+      <div>{{ $t('Activity.Finish-date') }} {{activity.finishDate}}</div>
       <v-card-actions>
-        <v-btn color="error" plain @click="openWarning(activity)">Delete</v-btn>
-        <v-btn color="blue" plain @click="updateDialog(activity)">Update</v-btn>
+        <v-btn color="error" plain @click="openWarning(activity)">{{ $t('Delete') }}</v-btn>
+        <v-btn color="blue" plain @click="updateDialog(activity)">{{ $t('Update') }}</v-btn>
       </v-card-actions>
     </v-card-text>
   </v-card>

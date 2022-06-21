@@ -1,39 +1,21 @@
 <template>
-  <AddProject v-bind:dialog="dialog"></AddProject>
   <v-div class="container">
     <v-row no-gutters>
-      <v-col
-          cols="12"
-          md="6">
+      <v-col cols="12" md="6">
         <v-img :src = "business.img" style="width: 200px;height: 200px;"></v-img>
         <div>
           <p>{{ $t('Business.Rate-this-business') }}</p>
-          <v-rating
-              v-model="rating"
-              background-color="orange lighten-3"
-              color="orange"
-              size="32"
-          ></v-rating>
+          <v-rating v-model="rating" background-color="orange lighten-3" color="orange" size="32"></v-rating>
         </div>
         <div>
           <p>{{ $t('Business.Rate-opinions') }}</p>
-          <v-rating
-              v-model="rating"
-              background-color="orange lighten-3"
-              color="orange"
-              size="32"
-          ></v-rating>
+          <v-rating v-model="rating" background-color="orange lighten-3" color="orange" size="32"></v-rating>
         </div>
-
         <div style="margin-right: 20px;">
           <div>
             <router-link :to= "{path: `/business/info/${business.id}/editing`}"
                          class="text-decoration-none list-style-none">
-              <v-btn
-                  class="ma-2"
-                  color="light-green darken-1"
-                  elevation="6"
-                  rounded>
+              <v-btn class="ma-2" color="light-green darken-1" elevation="6" rounded>
                 {{ $t('Business.Edit-Profile') }}</v-btn>
             </router-link>
           </div>
@@ -47,18 +29,11 @@
         </div>
 
       </v-col>
-      <v-col
-          cols="12"
-          sm="6"
-          md="6"
-      >
+      <v-col cols="12" sm="6" md="6">
         <v-btn style = "left: 500px;
                background: #2e7fce;
                top: 50px;
-               color: black"
-               rounded
-               elevation="10"
-               @click = "dialog=true" >
+               color: black" rounded elevation="10" @click = "dialog=true" >
           {{ $t('Business.NEW-PROJECT') }}</v-btn>
         <div style="background: black;text-align: center;">
           <p style="color: white;padding: 10px;">{{ $t('Project.Projects') }}</p>
@@ -68,10 +43,8 @@
                 <img :src="project.img" style="width: 150px; height: 150px;">
               </router-link>
             </div>
-
           </div>
         </div>
-
         <div style="padding: 20px;border: 2px solid black;margin-top: 20px;">
           <p><b>{{ $t('Business.Description') }}</b></p>
           <p class="text-justify">{{business.description}}</p>
@@ -79,6 +52,7 @@
       </v-col>
     </v-row>
   </v-div>
+  <AddProject v-bind:dialog="dialog"></AddProject>
 </template>
 
 <script>

@@ -46,12 +46,12 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '../views/CompanyProgressView.vue')
     },
     {
-        path: '/client-portfolio',
+        path: '/:businessId/client-portfolio',
         component: clientPortfolio,
         name: 'client-portfolio'
     },
     {
-        path: '/client-portfolio/client/:id',
+        path: '/:BusinessId/client-portfolio/client/:id',
         component: client,
         name: 'client'
     },

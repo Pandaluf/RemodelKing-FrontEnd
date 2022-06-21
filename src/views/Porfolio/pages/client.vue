@@ -1,10 +1,10 @@
 <template>
-  <h1 class="text-capitalize text-center my-10">{{ $t('Clients-Portfolio') }} {{client.firstName}} {{client.lastName}}</h1>
+  <h1 class="text-capitalize text-center my-10">{{ $t('Clients-Portfolio') }} {{client.name}}</h1>
   <v-card class="ma-10" color="#393939">
     <v-card-text class="text-white lh-40">
       <div>{{ $t('Client.Contract-date') }} {{client.contractDate}}</div>
       <div>{{ $t('Client.Email') }} {{client.email}}</div>
-      <div>{{ $t('Client.Phone-number') }} {{client.phoneNumber}}</div>
+      <div>{{ $t('Client.Phone-number') }} {{client.phone}}</div>
     </v-card-text>
   </v-card>
   <h2 class="ml-10" fluid>{{ $t('Activities') }}</h2>
@@ -100,17 +100,17 @@ export default {
       activities: [],
       dialog: false,
       valid: false,
-      title: '',
+      title: "",
       titleRules: [
         v => !!v || 'Title is required',
         v => v.length <= 20 || 'Title must be less than 20 characters'
       ],
-      description: '',
+      description: "",
       descriptionRules: [
         v => !!v || 'Description is required',
       ],
-      startDate: '',
-      finishDate: '',
+      startDate: "",
+      finishDate: "",
       dateRules: [
         v => !!v || 'Date is required',
       ],
@@ -128,21 +128,27 @@ export default {
   methods:{
     async createActivity(){
       // this.$refs.observer.validate();
-      if (this.title === '' || this.description === '' || this.startDate === '' || this.finishDate === ''){
+      if (this.title === "" || this.description === "" || this.startDate === "" || this.finishDate === ""){
         this.createAlert = true;
         return;
       }
-      this.values = {"title": this.title, "description": this.description,
-        "startDate": this.startDate, "finishDate": this.finishDate, "clientId": Number(this.$route.params.id)};
+      this.values = {
+        "title": "Discussion team",
+        "description": "this is about the budget to afford good qualities of materials",
+        "startDate": "2022-02-12",
+        "finisDate": "2022-02-13",
+        "portfolioId": Number(this.$route.params.id)
+      };
+      console.log(this.values)
       await this.portfolioService.create(this.values)
           .then(res=>{this.activities.push(res.data);})
           .catch(err=>console.log(err))
       this.dialog = false;
       this.createAlert = false;
-      this.title = '';
-      this.description = '';
-      this.startDate = '';
-      this.finishDate = '';
+      this.title = "";
+      this.description = "";
+      this.startDate = "";
+      this.finishDate = "";
     },
     async begin(){
       this.portfolioService = new PortfolioService();
@@ -151,7 +157,9 @@ export default {
           .then(res=>{this.client = res.data;})
           .catch(err => console.log(err))
       await this.portfolioService.getAllActivities()
-          .then(res=>{this.activities = res.data.filter(response=>response.clientId === this.client.id);})
+          .then(res=>{
+            this.activities = res.data.filter(response=>response.portfolioId === this.client.id);
+          })
           .catch(err => console.log(err))
     },
      async deleteActivity(){
@@ -181,10 +189,10 @@ export default {
           .catch(err=>console.log(err))
       this.dialog = false;
       this.createAlert = false;
-      this.title = '';
-      this.description = '';
-      this.startDate = '';
-      this.finishDate = '';
+      this.title = "";
+      this.description = "";
+      this.startDate = "";
+      this.finishDate = "";
 
     },
     updateDialog(activity){
@@ -206,10 +214,10 @@ export default {
     },
     createDialog(){
       // this.$refs.form.reset();
-      this.title = '';
-      this.description = '';
-      this.startDate = '';
-      this.finishDate = '';
+      this.title = "";
+      this.description = "";
+      this.startDate = "";
+      this.finishDate = "";
       this.dialogMessage = 'add';
     },
     openWarning(activity){

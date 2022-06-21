@@ -37,7 +37,7 @@
           <v-list-item :to="{path:'/CompanyProgress'}">
             <v-list-item-title>{{ $t('Titles.Company-Progress') }}</v-list-item-title>
           </v-list-item>
-          <v-list-item :to="{path:'/client-portfolio'}">
+          <v-list-item :to="{path:'/1/client-portfolio'}">
             <v-list-item-title>{{ $t('Titles.Portfolio') }}</v-list-item-title>
           </v-list-item>
           <v-list-item :to="{path:'/business/info/2'}">

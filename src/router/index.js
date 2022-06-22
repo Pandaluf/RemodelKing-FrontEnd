@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BusinessInfo from "../views/BusinessInfo.vue";
-import YourBusiness from "../views/YourBusiness.vue";
-import Payments from "../views/Payments.vue";
+import YourBusiness from "../views/Business/YourBusiness.vue";
+import Payments from "../views/Business/Payments.vue";
 import BusinessPage from "../Business/pages/businessPage.vue";
 import projectView from "../views/projectView.vue";
-import BusinessRequest from "../views/BusinessRequest.vue";
+import BusinessRequest from "../views/Business/BusinessRequest.vue";
 import RequestHistory from "../views/RequestHistory.vue";
 import BusinessProfile from "../Business/pages/BusinessProfile.vue";
 import ProjectProfile from "../Business/pages/ProjectProfile.vue";
@@ -16,7 +16,7 @@ import ForgotPasswordClientView from "../views/LoginClient/ForgotPasswordClientV
 import CompanyForgotPassword from "../views/LoginBusiness/CompanyForgotPassword.vue";
 import CompanyLogin from "../views/LoginBusiness/CompanyLogin.vue";
 import CompanyRegister from "../views/LoginBusiness/CompanyRegister.vue";
-import PayWithCard from "../views/PayWithCard.vue";
+import PayWithCard from "../views/Business/PayWithCard.vue";
 import UserType from "../views/UserType.vue";
 import clientPortfolio from "../views/Porfolio/pages/client-portfolio.vue";
 import client from "../views/Porfolio/pages/client.vue";

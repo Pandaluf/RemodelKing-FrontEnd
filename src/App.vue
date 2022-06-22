@@ -31,7 +31,7 @@
       </v-app-bar>
       <v-navigation-drawer v-model="drawer" bottom color="#4F8983">
         <v-list bg-color="#4f8983" style="margin-top: 13px">
-          <v-list-item :to="{path:'/'}">
+          <v-list-item :to="{path:'/Home'}">
             <v-list-item-title>{{ $t('Home') }}</v-list-item-title>
           </v-list-item>
           <v-list-item :to="{path:'/CompanyProgress'}">

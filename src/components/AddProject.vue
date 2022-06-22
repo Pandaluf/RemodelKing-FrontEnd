@@ -35,7 +35,7 @@
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
-                      v-model="form.localization"
+                      v-model="form.location"
                       :rules="localizationRules"
                       label="Localization*"
                       required
@@ -77,7 +77,15 @@ import {BusinessServices} from "../Business/services/business.services.js";
 export default {
   name: "AddProject",
   props:{
-    dialog: null
+    dialog: null,
+    form: {
+      businessId: 0,
+      style: '',
+      description: '',
+      location: '',
+      img: '',
+      score: 0,
+    },
   },
   data() {
     return{
@@ -88,17 +96,10 @@ export default {
       styleRules: [v=> !!v || 'Project style is required'],
       description: '',
       descriptionRules: [v=> !!v || 'Project description is required'],
-      localization: '',
+      location: '',
       localizationRules: [v=> !!v || 'Project localization is required'],
       img:'',
       imgRules:[v=> !!v || 'Project img is required'],
-      form: {
-        businessId: 0,
-        style: '',
-        description: '',
-        localization: '',
-        img: ''
-      },
     }
 
   },
@@ -107,7 +108,10 @@ export default {
       this.form.businessId = Number(this.$route.params.id)
       this.businessService = new BusinessServices()
       console.log(JSON.stringify(this.form))
-      this.businessService.createProject(JSON.stringify(this.form))
+      this.businessService.createProject(JSON.stringify(this.form)).response((res)=>{
+
+      })
+      this.dialog = false;
     },
   }
 }

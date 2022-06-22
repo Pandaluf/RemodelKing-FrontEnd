@@ -52,7 +52,7 @@
       </v-col>
     </v-row>
   </v-div>
-  <AddProject v-bind:dialog="dialog"></AddProject>
+  <AddProject v-bind:dialog="dialog" v-if="dialog"></AddProject>
 </template>
 
 <script>

@@ -133,14 +133,14 @@ export default {
         return;
       }
       this.values = {
-        "title": "Discussion team",
-        "description": "this is about the budget to afford good qualities of materials",
-        "startDate": "2022-02-12",
-        "finisDate": "2022-02-13",
+        "title": this.title,
+        "description": this.description,
+        "startDate": this.startDate,
+        "finishDate": this.finishDate,
         "portfolioId": Number(this.$route.params.id)
       };
-      console.log(this.values)
-      await this.portfolioService.create(this.values)
+      console.log(JSON.stringify(this.values))
+      await this.portfolioService.create(JSON.stringify(this.values))
           .then(res=>{this.activities.push(res.data);})
           .catch(err=>console.log(err))
       this.dialog = false;
@@ -167,7 +167,7 @@ export default {
             .then(this.activities.filter( (t) => t.id !== this.deleteInfo.id? t : false))
             .catch(err=>console.log(err))
         await this.portfolioService.getAllActivities()
-            .then(res=>{this.activities = res.data.filter(response=>response.clientId === this.client.id);})
+            .then(res=>{this.activities = res.data.filter(response=>response.portfolioId === this.client.id);})
             .catch(err => console.log(err))
        this.dialogWarning = false;
     },
@@ -177,8 +177,9 @@ export default {
         return;
       }
       this.values = {"title": this.title, "description": this.description,
-        "startDate": this.startDate, "finishDate": this.finishDate, "clientId": Number(this.$route.params.id)};
-      await this.portfolioService.update(this.updateInfo.id, this.values)
+        "startDate": this.startDate, "finishDate": this.finishDate, "portfolioId": Number(this.$route.params.id)};
+      console.log(JSON.stringify(this.values))
+      await this.portfolioService.update(this.updateInfo.id, JSON.stringify(this.values))
           .then((res)=> {
             this.activities = this.activities.map((o) => {
               if (o.id === this.updateInfo.id)

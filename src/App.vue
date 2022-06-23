@@ -9,23 +9,27 @@
           <Languages></Languages>
         </div>
 
-        <router-link to="/UserType" class="text-decoration-none" style="margin-top: 56px; border-style: solid; border-color: black; background-color: #984857;">
-          <v-btn id="menu-activator" size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-login-variant</v-icon>
-            {{ $t('Log-in') }}</v-btn>
-          <v-menu activator="#menu-activator">
-            <v-list>
-              <v-list-item
-                  v-for="(item, index) in items"
-                  :key="index"
-                  :value="index"
-              >
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  <router-link v-if='!this.isSigned' to="/UserType" class="text-decoration-none" style="margin-top: 56px; border-style: solid; border-color: black; background-color: #984857;">
+                    <v-btn id="menu-activator" size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-login-variant</v-icon>
+                      {{ $t('Log-in') }}</v-btn>
+                    <v-menu activator="#menu-activator">
+                      <v-list>
+                        <v-list-item
+                            v-for="(item, index) in items"
+                            :key="index"
+                            :value="index"
+                        >
+                          <v-list-item-title>{{ item.title }}</v-list-item-title>
               </v-list-item>
             </v-list>
           </v-menu>
         </router-link>
-        <router-link to="/Register" class="text-decoration-none" style="margin-top: 56px; margin-right: 15px; margin-left: 10px; border-style: solid; border-color: black; background-color: #984857">
+        <router-link v-if='!this.isSigned' to="/Register" class="text-decoration-none" style="margin-top: 56px; margin-right: 15px; margin-left: 10px; border-style: solid; border-color: black; background-color: #984857">
           <v-btn size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-account-plus</v-icon>  {{ $t('Register') }}</v-btn>
+        </router-link>
+        <router-link v-if='this.isSigned' to="/home" >
+          <v-btn  @click="logOut()" id="menu-activator" size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-login-variant</v-icon>
+            {{ $t('Log Out') }}</v-btn>
         </router-link>
         <span><img :src="logo" style="height: 65px; margin-top:25px; border-style: dot-dot-dash;"/></span>
       </v-app-bar>
@@ -55,6 +59,9 @@
 import logo from "./assets/logo.png";
 import footerComponent from "./components/footerComponent.vue";
 import Languages from "./components/Languages.vue";
+import {BusinessLoginService} from "./views/LoginBusiness/services/BusinessLogin.Service";
+
+
 
 export default {
   components:{
@@ -72,8 +79,33 @@ export default {
       {
         title:'Client'
       }
-    ]
+    ],
+    businesses: null,
+    businessData: null,
+    isSigned: false
   }),
+  created() {
+    this.businesses = new BusinessLoginService();
+    this.begin();
+  },
+  methods:{
+    async logOut(){
+      await this.businesses.signOut();
+      this.isSigned = false;
+    },
+    async begin(){
+      let user = await this.businesses.isSigned();
+       if (user.token){
+         console.log("entra")
+         this.isSigned = true;
+       }
+       else{
+         console.log("no entra")
+         this.isSigned = false;
+       }
+      console.log("denfinitivamente es: ", this.isSigned);
+    }
+  }
 }
 </script>
 

@@ -16,10 +16,10 @@ import ForgotPasswordClientView from "../views/LoginClient/ForgotPasswordClientV
 import CompanyForgotPassword from "../views/LoginBusiness/CompanyForgotPassword.vue";
 import CompanyLogin from "../views/LoginBusiness/CompanyLogin.vue";
 import CompanyRegister from "../views/LoginBusiness/CompanyRegister.vue";
-import PayWithCard from "../views/Business/PayWithCard.vue";
 import UserType from "../views/UserType.vue";
 import clientPortfolio from "../views/Porfolio/pages/client-portfolio.vue";
 import client from "../views/Porfolio/pages/client.vue";
+import PayWithCard from "../views/LoginBusiness/PayWithCard.vue";
 const routes = [
     {
         path: '/',

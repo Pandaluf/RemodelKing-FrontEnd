@@ -57,7 +57,7 @@ export default {
     return{
       business: [],
       businessService: null,
-      filterField: ''
+      filterField: '',
     }
   },
   created() {
@@ -67,6 +67,7 @@ export default {
 
       console.log(this.business.name)
     })
+
   },
   methods: {
     filter(card){

@@ -1,15 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import BusinessInfo from "../views/BusinessInfo.vue";
 import YourBusiness from "../views/Business/YourBusiness.vue";
-import Payments from "../views/Business/Payments.vue";
 import BusinessPage from "../Business/pages/businessPage.vue";
 import projectView from "../views/projectView.vue";
 import BusinessRequest from "../views/Business/BusinessRequest.vue";
 import RequestHistory from "../views/RequestHistory.vue";
 import BusinessProfile from "../Business/pages/BusinessProfile.vue";
 import ProjectProfile from "../Business/pages/ProjectProfile.vue";
-import BusinessProfileEdited from "../Business/pages/BusinessProfileEdited.vue";
 import ClientLoginView from "../views/LoginClient/ClientLoginView.vue";
 import ClientRegisterView from "../views/LoginClient/ClientRegisterView.vue";
 import ForgotPasswordClientView from "../views/LoginClient/ForgotPasswordClientView.vue";
@@ -41,11 +38,6 @@ const routes = [
         component: HomeView
     },
     {
-        path: '/CompanyProgress',
-        name: 'CompanyProgress',
-        component: () => import(/* webpackChunkName: "about" */ '../views/CompanyProgressView.vue')
-    },
-    {
         path: '/:businessId/client-portfolio',
         component: clientPortfolio,
         name: 'client-portfolio'
@@ -71,11 +63,6 @@ const routes = [
         component: BusinessProfile
     },
     {
-        path: '/Payments',
-        name: 'Payments',
-        component: Payments
-    },
-    {
         path: '/Home/business/:id/project/:projectId',
         name: 'project',
         component: projectView
@@ -86,7 +73,7 @@ const routes = [
         component: BusinessRequest
     },
     {
-        path: '/history',
+        path: '/history/:id',
         name: 'requestHistory',
         component: RequestHistory
     },
@@ -94,11 +81,6 @@ const routes = [
         path: '/business/info/:id/project/info/:idProject',
         name: 'projectProfile',
         component: ProjectProfile
-    },
-    {
-        path: '/business/info/:id',
-        name: 'businessEdited',
-        component: BusinessProfileEdited
     },
     {
         path:"/ClientLogin",

@@ -41,10 +41,10 @@
           <v-list-item :to="{path:'/1/client-portfolio'}">
             <v-list-item-title>{{ $t('Titles.Portfolio') }}</v-list-item-title>
           </v-list-item>
-          <v-list-item :to="{path:'/business/info/2'}">
+          <v-list-item :to="{path:'/business/info/1'}">
             <v-list-item-title>{{ $t('Titles.Your-Business') }}</v-list-item-title>
           </v-list-item>
-          <v-list-item :to="{path:'/history'}">
+          <v-list-item :to="{path:'/history/1'}">
             <v-list-item-title>{{ $t('requestHistory') }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -95,15 +95,12 @@ export default {
     },
     async begin(){
       let user = await this.businesses.isSigned();
-       if (user.token){
-         console.log("entra")
+       if (user){
          this.isSigned = true;
        }
        else{
-         console.log("no entra")
          this.isSigned = false;
        }
-      console.log("denfinitivamente es: ", this.isSigned);
     }
   }
 }

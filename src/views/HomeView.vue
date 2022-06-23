@@ -64,7 +64,6 @@ export default {
     this.businessService = new BusinessServices();
     this.businessService.getAll().then((response)=>{
       this.business = response.data;
-
       console.log(this.business.name)
     })
 

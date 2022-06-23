@@ -4,17 +4,17 @@ const USER_KEY = "user";
 export class BusinessLoginService {
     id = "";
     getAll(){
-        return http.get('/api/v1/businesses');
+        return http.get('/businesses');
     }
     getAccount(email){
-        return http.get(`/api/v1/businesses/account/${email}`)
+        return http.get(`/businesses/account/${email}`)
     }
 
     isSignedIn(email){
-        return http.get(`/api/v1/businesses/${email}`);
+        return http.get(`/businesses/${email}`);
     }
     async signIn(request){
-        return await http.post(`/api/v1/users/sign-in`, request).then(res => {
+        return await http.post(`/users/sign-in`, request).then(res => {
             console.log(`${res.data.token}`);
             if (res.data.token) {
                 console.log(`user: ${JSON.stringify(res.data)}`);
@@ -24,7 +24,7 @@ export class BusinessLoginService {
         })
     }
     async signUp(item){
-        return await http.post('/api/v1/users/sign-up', item).then(res=>{
+        return await http.post('/users/sign-up', item).then(res=>{
             console.log("JAJAJAJAJAJA", res.data.id)
             return res.data.id;
         })

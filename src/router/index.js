@@ -17,6 +17,7 @@ import UserType from "../views/UserType.vue";
 import clientPortfolio from "../views/Porfolio/pages/client-portfolio.vue";
 import client from "../views/Porfolio/pages/client.vue";
 import PayWithCard from "../views/LoginBusiness/PayWithCard.vue";
+import ClientProfile from "../Client/pages/ClientProfile.vue";
 const routes = [
     {
         path: '/',
@@ -122,6 +123,11 @@ const routes = [
         name: 'UserType',
         component: UserType
     },
+    {
+        path: '/client/info/:id',
+        name: 'Client',
+        component: ClientProfile
+    }
 
 ]
 

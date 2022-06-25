@@ -1,5 +1,16 @@
 {
-  "client": [],
+  "clients": [
+    {
+      "id": 1,
+      "name": "Marco",
+      "lastName": "Li",
+      "email": "gparedes@gmail.com",
+      "phone": "954875962",
+      "address": "Av. Tomás Marsano, 173, Lima, Perú",
+      "img": "https://thumbs.dreamstime.com/b/retrato-del-encargado-joven-feliz-business-man-smiling-en-el-trabajo-hombre-de-negocios-hisp%C3%A1nico-acertado-que-mira-la-c%C3%A1mara-139629540.jpg",
+      "description": "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary"
+    }
+  ],
   "Business": [
     {
       "id": 1,

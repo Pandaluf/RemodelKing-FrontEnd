@@ -6,7 +6,7 @@
           Your data was saved successfully
         </v-card-title>
         <v-card-actions>
-          <router-link to="/Login" class="text-decoration-none">
+          <router-link to="/ClientLogin" class="text-decoration-none">
             <v-btn color="green darken-1" text @click="dialog = false">
               Okey
             </v-btn>

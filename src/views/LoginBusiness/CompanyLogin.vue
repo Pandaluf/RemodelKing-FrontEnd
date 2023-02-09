@@ -63,19 +63,17 @@
         </v-card>
       </v-footer>
     </template>
+    <div >{{businesses}}</div>
+    <div>{{account}}</div>
   </v-app>
-  <footer-component />
 </template>
 <script>
 
-import footerComponent from "../../components/footerComponent.vue";
 import {BusinessServices} from "../../Business/services/business.services";
+import {BusinessLoginService} from "./services/BusinessLogin.Service";
 
 export default{
   name: "ForgotPassword",
-  components: {
-    footerComponent
-  },
   data()
   {
     return{
@@ -83,25 +81,43 @@ export default{
       businessService: null,
       business: [],
       emailConfirm: "",
-      passwordConfirm: ""
+      passwordConfirm: "",
+      businessLoginService: null,
+      businesses: [],
+      account: [],
+      goToHomePage: true
     }
   },
   created() {
-    this.businessService = new BusinessServices()
-    this.businessService.getAll().then(response=>{
-      this.business = response.data
-      console.log(this.business)
+    // this.businessService = new BusinessServices()
+    // this.businessService.getAll().then(response=>{
+    //   this.business = response.data
+    //   console.log(this.business)
+    // })
+    this.businessLoginService = new BusinessLoginService();
+    this.businessLoginService.getAll().then(response=>{
+      this.businesses = response.data;
     })
   },
   methods:{
-    isLogin(){
-      this.business.map((response)=>{
-        console.log(response.email)
-       if (this.emailConfirm === response.email && this.passwordConfirm === response.password){
-          this.$router.replace(`/Business/${response.id}`)
-        }
-      })
-    }
+    async isLogin(){
+      // this.business.map((response)=>{
+      //   console.log(response.email)
+      //  if (this.emailConfirm === response.email && this.passwordConfirm === response.password){
+      //     this.$router.replace(`/Business/${response.id}`)
+      //   }
+      // })
+      this.values = {"email": this.emailConfirm, "password": this.passwordConfirm}
+      await this.businessLoginService.signIn(JSON.stringify(this.values)).then(response=>{
+        this.account = response;
+      }).catch(err=>console.log(err));
+      if (this.account.email === this.emailConfirm)
+      {
+        await this.$router.replace("/home");
+      }
+      else
+        console.log("no")
+    },
   }
 }
 </script>

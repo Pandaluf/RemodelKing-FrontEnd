@@ -5,13 +5,13 @@
       <v-col v-for="info in clientInfo" :key="info.id" cols="12" md="6" lg="4" class="white--text">
         <v-card color="#393939" class="rounded-xl w-80 ma-auto">
           <v-card-text class="text-white text-clamp lh-40">
-            <div class="lh-40 font-weight-bold">{{ $t('Client.Name') }} {{info.firstName}} {{info.lastName}}</div>
+            <div class="lh-40 font-weight-bold">{{ $t('Client.Name') }} {{info.name}}</div>
             <div class="lh-40">{{ $t('Client.Contract-date') }} {{info.contractDate}}</div>
             <div class="lh-40">{{ $t('Client.Email') }} {{info.email}}</div>
-            <div class="lh-40">{{ $t('Client.Phone-number') }} {{info.phoneNumber}}</div>
+            <div class="lh-40">{{ $t('Client.Phone-number') }} {{info.phone}}</div>
           </v-card-text>
           <v-card-actions>
-            <router-link :array="clientInfo" :to="{path: `/client-portfolio/client/${info.id}`}"
+            <router-link :array="clientInfo" :to="{path: `/1/client-portfolio/client/${info.id}`}"
                          class="text-decoration-none list-style-none">
               <v-btn color="#76C03C">{{ $t('More') }}</v-btn>
             </router-link>
@@ -37,7 +37,11 @@ export default {
   created(){
     this.clientService = new ClientService();
     this.clientService.getAll().then(res=>{
-      this.clientInfo = res.data;
+      this.clientInfo = res.data.filter((res) => {
+        if (res.businessId === Number(this.$route.params.businessId)) {
+          return res
+        }
+      })
     })
   },
 }

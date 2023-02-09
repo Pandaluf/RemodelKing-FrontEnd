@@ -6,20 +6,25 @@
       <thead>
       <tr>
         <th class="text-left">
-          Name
+          BusinessName
         </th>
         <th class="text-left">
-          Calories
+          Email
+        </th>
+        <th class="text-left">
+          Title
+        </th>
+        <th class="text-left">
+          Description
         </th>
       </tr>
       </thead>
       <tbody>
-      <tr
-          v-for="item in desserts"
-          :key="item.name"
-      >
-        <td>{{ item.name }}</td>
-        <td>{{ item.calories }}</td>
+      <tr v-for="item in requests" :key="item.id">
+        <td>{{ item.businessName }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.description }}</td>
       </tr>
       </tbody>
     </v-table>
@@ -27,53 +32,29 @@
 </template>
 
 <script>
+import {RequestService} from "./Clients/ClientServices/request.service";
+
 export default {
   data () {
     return {
-      desserts: [
-        {
-          name: 'Frozen Yogurt',
-          calories: 159,
-        },
-        {
-          name: 'Ice cream sandwich',
-          calories: 237,
-        },
-        {
-          name: 'Eclair',
-          calories: 262,
-        },
-        {
-          name: 'Cupcake',
-          calories: 305,
-        },
-        {
-          name: 'Gingerbread',
-          calories: 356,
-        },
-        {
-          name: 'Jelly bean',
-          calories: 375,
-        },
-        {
-          name: 'Lollipop',
-          calories: 392,
-        },
-        {
-          name: 'Honeycomb',
-          calories: 408,
-        },
-        {
-          name: 'Donut',
-          calories: 452,
-        },
-        {
-          name: 'KitKat',
-          calories: 518,
-        },
-      ],
+      requestService: null,
+      requests: [],
     }
   },
+  created() {
+    console.log("algo")
+    this.requestService = new RequestService();
+    this.requestService.getAll().then((response)=>{
+      this.requests = response.data.map(res=>{
+        if(res.clientId === Number(this.$route.params.id)){
+          return res;
+        }
+      });
+    }).catch(()=>{
+      console.log("The getAll is not")
+    })
+    console.log(this.requests)
+  }
 }
 </script>
 

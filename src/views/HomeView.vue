@@ -57,16 +57,16 @@ export default {
     return{
       business: [],
       businessService: null,
-      filterField: ''
+      filterField: '',
     }
   },
   created() {
     this.businessService = new BusinessServices();
     this.businessService.getAll().then((response)=>{
       this.business = response.data;
-
       console.log(this.business.name)
     })
+
   },
   methods: {
     filter(card){

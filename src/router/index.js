@@ -1,25 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import BusinessInfo from "../views/BusinessInfo.vue";
-import YourBusiness from "../views/YourBusiness.vue";
-import Payments from "../views/Payments.vue";
+import YourBusiness from "../views/Business/YourBusiness.vue";
 import BusinessPage from "../Business/pages/businessPage.vue";
 import projectView from "../views/projectView.vue";
-import BusinessRequest from "../views/BusinessRequest.vue";
+import BusinessRequest from "../views/Business/BusinessRequest.vue";
 import RequestHistory from "../views/RequestHistory.vue";
 import BusinessProfile from "../Business/pages/BusinessProfile.vue";
 import ProjectProfile from "../Business/pages/ProjectProfile.vue";
-import BusinessProfileEdited from "../Business/pages/BusinessProfileEdited.vue";
 import ClientLoginView from "../views/LoginClient/ClientLoginView.vue";
 import ClientRegisterView from "../views/LoginClient/ClientRegisterView.vue";
 import ForgotPasswordClientView from "../views/LoginClient/ForgotPasswordClientView.vue";
 import CompanyForgotPassword from "../views/LoginBusiness/CompanyForgotPassword.vue";
 import CompanyLogin from "../views/LoginBusiness/CompanyLogin.vue";
 import CompanyRegister from "../views/LoginBusiness/CompanyRegister.vue";
-import PayWithCard from "../views/PayWithCard.vue";
 import UserType from "../views/UserType.vue";
 import clientPortfolio from "../views/Porfolio/pages/client-portfolio.vue";
 import client from "../views/Porfolio/pages/client.vue";
+import PayWithCard from "../views/LoginBusiness/PayWithCard.vue";
+import ClientProfile from "../Client/pages/ClientProfile.vue";
 const routes = [
     {
         path: '/',
@@ -41,17 +39,12 @@ const routes = [
         component: HomeView
     },
     {
-        path: '/CompanyProgress',
-        name: 'CompanyProgress',
-        component: () => import(/* webpackChunkName: "about" */ '../views/CompanyProgressView.vue')
-    },
-    {
-        path: '/client-portfolio',
+        path: '/:businessId/client-portfolio',
         component: clientPortfolio,
         name: 'client-portfolio'
     },
     {
-        path: '/client-portfolio/client/:id',
+        path: '/:BusinessId/client-portfolio/client/:id',
         component: client,
         name: 'client'
     },
@@ -71,11 +64,6 @@ const routes = [
         component: BusinessProfile
     },
     {
-        path: '/Payments',
-        name: 'Payments',
-        component: Payments
-    },
-    {
         path: '/Home/business/:id/project/:projectId',
         name: 'project',
         component: projectView
@@ -86,7 +74,7 @@ const routes = [
         component: BusinessRequest
     },
     {
-        path: '/history',
+        path: '/history/:id',
         name: 'requestHistory',
         component: RequestHistory
     },
@@ -94,11 +82,6 @@ const routes = [
         path: '/business/info/:id/project/info/:idProject',
         name: 'projectProfile',
         component: ProjectProfile
-    },
-    {
-        path: '/business/info/:id',
-        name: 'businessEdited',
-        component: BusinessProfileEdited
     },
     {
         path:"/ClientLogin",
@@ -140,6 +123,11 @@ const routes = [
         name: 'UserType',
         component: UserType
     },
+    {
+        path: '/client/info/:id',
+        name: 'Client',
+        component: ClientProfile
+    }
 
 ]
 

@@ -15,19 +15,18 @@
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               @click:append="showPassword =! showPassword"/>
         </v-card-text>
-        <v-btn @click="login" size="30px" width="120px" color="#FFFFFF"><v-icon>mdi-account-plus</v-icon>Client Login</v-btn>
       </v-form>
 
 
       <v-divider></v-divider>
       <v-card-actions class ="text-center">
-        <router-link to="/Register" class = "text-decoration-none">
+        <router-link to="/ClientRegister" class = "text-decoration-none">
           <v-btn color="success">Register</v-btn>
         </router-link>
-        <router-link to="/Login" class = "text-decoration-none">
+        <router-link to="/ClientLogin" class = "text-decoration-none">
           <v-btn color="success">Login</v-btn>
         </router-link>
-        <router-link to="/ForgotPassword" class = "text-decoration-none">
+        <router-link to="/ClientForgotPassword" class = "text-decoration-none">
           <v-btn color="success">Forgot my password</v-btn>
         </router-link>
 

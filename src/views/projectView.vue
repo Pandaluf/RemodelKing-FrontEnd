@@ -30,7 +30,7 @@
                 <v-card-text style="font-size: 23px">{{project.description}}</v-card-text>
               </v-card-title>
               <v-card-title style="margin-top: 25px; font-size: 28px">{{ $t('Project.Localization') }}
-                <v-card-text style="font-size: 23px">{{project.localization}}</v-card-text>
+                <v-card-text style="font-size: 23px">{{project.location}}</v-card-text>
               </v-card-title>
             </v-card>
           </v-col>
@@ -58,6 +58,7 @@ export default {
   },
   created() {
     this.businessService = new BusinessServices();
+    console.log(this.$route.params.projectId)
     this.businessService.getProjectById(this.$route.params.projectId).then((response)=>{
       this.project = response.data
     })
